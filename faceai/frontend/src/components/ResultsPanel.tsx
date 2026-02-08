@@ -131,7 +131,10 @@ export function ResultsPanel({ result, onRecalculate, recalculating, onManualTr 
           {showDebug && (
             <div className="image-grid">
               {Object.entries(result.annotated_images)
-                .filter(([key, value]) => key.startsWith("tr_") && value)
+                .filter(
+                  (entry): entry is [string, string] =>
+                    entry[0].startsWith("tr_") && typeof entry[1] === "string"
+                )
                 .map(([key, value]) => (
                   <figure key={key}>
                     <img src={value} alt={key} className="zoomable" onClick={() => openZoom(value, key)} />

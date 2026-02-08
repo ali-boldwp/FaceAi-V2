@@ -28,12 +28,12 @@ RUN set -eux; \
     rm -f /etc/nginx/sites-enabled/default; \
     cat > /etc/nginx/conf.d/default.conf <<'EOF'
 server {
-  listen 80;
+  listen 8000;
   server_name _;
   root /usr/share/nginx/html;
 
   location /api/ {
-    proxy_pass http://127.0.0.1:8000;
+    proxy_pass http://127.0.0.1:8001;
     proxy_set_header Host $host;
     proxy_set_header X-Real-IP $remote_addr;
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -52,7 +52,7 @@ RUN set -eux; \
 nodaemon=true
 
 [program:uvicorn]
-command=uvicorn app.main:app --host 0.0.0.0 --port 8000 --app-dir /app/backend
+command=uvicorn app.main:app --host 0.0.0.0 --port 8001 --app-dir /app/backend
 directory=/app/backend
 autostart=true
 autorestart=true
@@ -71,5 +71,5 @@ stderr_logfile=/dev/stderr
 stderr_logfile_maxbytes=0
 EOF
 
-EXPOSE 80
+EXPOSE 8000
 CMD ["supervisord", "-c", "/etc/supervisor/supervisord.conf"]

@@ -1,0 +1,11 @@
+{
+  "name": "faceai",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "concurrently \"npm --prefix frontend run dev\" \"python -m uvicorn app.main:app --reload --reload-exclude model_cache --reload-exclude backend/model_cache --host 0.0.0.0 --port 8000 --app-dir backend\""
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

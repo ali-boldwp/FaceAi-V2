@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap");
+
+:root {
+  --bg: #f6f1eb;
+  --bg-accent: #fbe9da;
+  --ink: #1d1b17;
+  --muted: #6b6359;
+  --card: #ffffff;
+  --primary: #e85d4a;
+  --primary-dark: #c13f31;
+  --border: rgba(29, 27, 23, 0.12);
+  --shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  background: radial-gradient(circle at top left, var(--bg-accent), var(--bg));
+  color: var(--ink);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+}
+
+.hero {
+  display: grid;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: clamp(2rem, 3.5vw, 3.5rem);
+  margin: 0;
+}
+
+.subhead {
+  color: var(--muted);
+  max-width: 680px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+  margin-bottom: 24px;
+  animation: rise 0.6s ease both;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-bottom: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.field input[type="file"] {
+  padding: 12px;
+  border: 1px dashed var(--border);
+  border-radius: 12px;
+  background: #faf8f5;
+}
+
+.primary {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.primary:hover:not(:disabled) {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.hint {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.results {
+  display: grid;
+  gap: 24px;
+}
+
+.image-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.image-grid img {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+}
+
+.zoomable {
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
+}
+
+.zoomable:hover {
+  transform: scale(1.01);
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.toggle input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+.manual-tr {
+  margin: 12px 0 8px;
+  display: grid;
+  gap: 8px;
+}
+
+.image-grid.selecting img {
+  outline: 2px dashed var(--primary);
+  outline-offset: 4px;
+  cursor: crosshair;
+}
+
+.table {
+  display: grid;
+  gap: 8px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr 2fr;
+  gap: 12px;
+  padding: 10px 12px;
+  background: #faf8f5;
+  border-radius: 12px;
+  font-size: 0.9rem;
+}
+
+.row.header {
+  background: #ede3d8;
+  font-weight: 600;
+}
+
+.warnings {
+  background: #fff4ee;
+  border: 1px solid #f3c0ad;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.error {
+  border-color: #f2b5b0;
+  background: #fff0ef;
+  color: #8b2015;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+pre {
+  background: #11100f;
+  color: #f5f0ea;
+  padding: 16px;
+  border-radius: 12px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+}
+
+.zoom-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 16, 15, 0.8);
+  display: grid;
+  place-items: center;
+  z-index: 50;
+  padding: 24px;
+}
+
+.zoom-content {
+  background: #0e0d0c;
+  border-radius: 16px;
+  padding: 16px;
+  max-width: 92vw;
+  max-height: 92vh;
+  display: grid;
+  gap: 12px;
+}
+
+.zoom-content img {
+  max-width: 88vw;
+  max-height: 80vh;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.zoom-close {
+  justify-self: end;
+  background: #fbe9da;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 720px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}

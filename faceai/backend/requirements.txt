@@ -1,0 +1,10 @@
+fastapi
+uvicorn[standard]
+python-multipart
+mediapipe==0.10.11
+opencv-python
+numpy
+pydantic
+torch
+torchvision
+pillow

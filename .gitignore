@@ -1,0 +1,6 @@
+/faceai/node_modules/
+/faceai/frontend/node_modules/
+/faceai/frontend/package-lock.json
+/faceai/package-lock.json
+/.venv/
+/faceai/backend/model_cache/

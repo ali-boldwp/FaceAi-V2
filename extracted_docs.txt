@@ -1,0 +1,1418 @@
+
+
+=================================
+--- Fata ideala.docx ---
+=================================
+Fața ideală
+Aplicată în analiză facială, proporția de aur (Φ = 1,618) exprimă raportul ideal între segmentele esențiale ale feței, unde fiecare parte este în armonie cu întregul.
+REPERE ANATOMICE UTILIZATE
+PROPORȚII IDEALE BAZATE PE Φ
+INTERPRETARE PSIHOCOMPORTAMENTALĂ
+FORMULE PRACTICE DE CALCUL
+Dacă luăm lățimea ochiului (O) ca unitate de bază:
+Lățimea feței ≈ 5 × O
+Înălțimea feței ≈ 7 × O
+Distanța ochi–gură ≈ 2.5 × O
+Raport total (7 ÷ 2.5) ≈ 2.8 ≈ Φ²
+Astfel, se poate construi o grilă proporțională pentru măsurare aplicată.
+GRILĂ DE MĂSURARE (exemplu aplicativ)
+1. Alegerea reperului de bază
+Cel mai stabil și ușor de măsurat reper facial este: Lățimea ochiului (Wₒ) – distanța dintre colțurile intern și extern ale ochiului. De ce:
+nu variază cu expresia (spre deosebire de gură sau sprâncene);
+are o proporție constantă în majoritatea fețelor umane (± 30 mm la adult);
+servește drept unitate de măsură naturală în artă, estetică și știință facială.
+Vom nota Wₒ = unitatea de bază = 1,00. Toate celelalte dimensiuni se exprimă în multipli sau fracții ale Wₒ.
+2. Repere standard de proporționare (fața ideală)
+🔹 A. Lățimi orizontale (în multipli ai Wₒ)
+🔹 B. Înălțimi verticale (în multipli ai Wₒ)
+🔹 C. Raporturi complementare (pentru armonie fină)
+3. Formule de calcul exemplificative
+Dacă Wₒ = 30 mm,
+atunci:
+4. Combinații recomandate
+În analiza facială se utilizează un sistem combinat de repere:
+Fața ideală se definește în unități de ochi (Wₒ), dar se validează cu înălțimea feței (Hf) pentru a menține proporția globală.
+Pentru citirea feței psihocomportamentale, cea mai eficientă combinație este:
+Reper principal: Lățimea ochiului (Wₒ)
+Reper secundar: Înălțimea feței (Hf)
+Reper de calibrare: Distanța interoculară (Dₒ)
+Această triadă îți oferă:
+acuratețe geometrică,
+ușurință în măsurare,
+și semnificație psihologică directă (echilibru între percepție, rațiune și acțiune).
+Putem avea trei niveluri de integrare:
+1️. Nivelul geometric – proporții ideale
+Se aplică proporția de aur pentru principalele distanțe verticale și orizontale ale feței:
+Dacă lățimea ochiului (O) devine unitatea de măsură, putem calcula:
+Distanța între ochi = 1 × O
+Lățimea nasului = 1 × O
+Lățimea gurii = 2 × O
+Înălțimea feței = 7 × O
+Lățimea feței = 5 × O
+Măsurători simple → proporții → formă a feței
+Este nevoie doar de o fotografie frontală corectă sau de subiectul în față.
+🔵 1. Lățimea feței (bizigomatică)
+Măsurată între cele două puncte cele mai laterale ale pomeților.
+🔵 2. Lățimea mandibulei (bigonială)
+Măsurată între unghiurile mandibulare.
+🔵 3. Înălțimea feței (nasion → menton)
+De la baza nasului (nasion) până la vârful bărbiei.
+🔵 4. Lățimea frunții
+La nivelul celei mai late porțiuni frontale.
+Formula generală pentru determinarea obiectivă a formei feței
+🔸 Raportul 1: Lățime față / Înălțime față
+> 0.85 → rotundă
+0.75–0.85 → ovală
+< 0.75 → alungită / oblongă
+🔸 Raportul 2: Frunte / Mandibulă (lățimi)
+Frunte > Mandibulă → față triunghiulară
+Frunte < Mandibulă → triunghi inversat
+Frunte ≈ Mandibulă → ovală, pătrată sau trapezoidală
+🔸 Raportul 3: Bizigomatică / Bigonială
+> 1.45 → diamant
+1.30–1.40 → inimă
+1.10–1.20 → ovală
+≈ 1.00 → pătrată / rectangulară
+🔸 Raportul 4: Înălțime Z1 : Z2 : Z3
+Măsori cât reprezintă fiecare dintre cele 3 zone.
+Z1 dominant → rectangulară / triunghiulară
+Z2 dominant → rotundă / diamant / inimă
+Z3 dominant → pătrată / triunghi inversat / trapezoidală
+2. Nivelul antropometric
+Folosim 12 puncte anatomice și 7 distanțe standard:
+Puncte:
+• trichion
+• glabella
+• nasion
+• subnasale
+• menton
+• zygion L & R
+• gonion L & R
+• frontotemporale
+• cheilion (colțuri gură)
+Distanțe cheie:
+trichion–menton (TM)
+nasion–menton (NM)
+bizigomatică (Z–Z)
+bigonială (G–G)
+frunte (FT–FT)
+maxilar (G–G)
+obraji (Z–Z)
+Scorarea se face după indici antropometrici
+🔸 Indicele facial vertical (IFV) = Înălțimea feței / Lățimea feței
+IFV < 1.20 → față lată (rotundă / pătrată)
+IFV 1.30 → ovală
+IFV > 1.40 → oblongă
+🔸 Indicele zigomato-gonial (IZG) = Bizigomatică / Bigonială
+IZG > 1.45 → diamant
+IZG ≈ 1.00 → pătrată
+🔸 Indicele fronto-mandibular (IFM) = Lățime frunte / Lățime mandibulă
+IFM > 1.10 → triunghiulară
+IFM < 0.90 → triunghi inversat
+3. Nivelul morfologic
+Aceasta este metoda se bazează pe vectori morfologici, nu doar pe lungimi:
+🔵 Vector Z1 (cognitiv)
+– înălțimea frunții
+– curbură
+– înclinare
+– lățimea frontală
+🔵 Vector Z2 (emoțional)
+– proeminența pomeților
+– rotunjimea obrajilor
+– distribuția volumului
+🔵 Vector Z3 (volitiv)
+– unghiul mandibular
+– lățimea maxilarului
+– adâncimea bărbiei
+Se determină care vector este dominant.
+De exemplu:
+Z2 dominant → rotundă / diamant / inimă
+Z3 dominant → pătrată / trapezoidală / inversat triunghi
+Z1 dominant → rectangulară / triunghi
+Algoritm pentru cele 10 forme de fațe
+1. Ce măsurăm (aceleași variabile pentru toate formele, în mm sau pixeli)
+H = înălțimea feței
+de la Nasion (N) la Menton (M)
+W = lățimea feței la pomeți
+distanța Zygion stânga (ZL) – Zygion dreapta (ZR)
+J = lățimea mandibulei
+distanța Gonion stânga (GL) – Gonion dreapta (GR)
+F = lățimea frunții
+distanța Frontotemporale stânga (FL) – Frontotemporale dreapta (FR)
+2. Indicii calculați (valabili pentru toate formele)
+IFV  = H / W       # Indice facial vertical (înălțime / lățime)
+IZG  = W / J       # Indice zigomato-gonial (pomeți / mandibulă)
+IFM  = F / J       # Indice fronto-mandibular (frunte / mandibulă)
+IFZF = W / F       # Indice zigomato-frontal (pomeți / frunte)
+3. Formule tipice pentru fiecare din cele 10 forme de față
+1️. Față OVALĂ
+Față proporționată, medie ca lungime, pomeți ceva mai lați decât mandibula, frunte ≈ mandibulă.
+1.20 ≤ IFV ≤ 1.35
+1.10 ≤ IZG ≤ 1.25
+0.90 ≤ IFM ≤ 1.10
+0.95 ≤ IFZF ≤ 1.20
+2️. Față ROTUNDĂ
+Față relativ scurtă și lată, pomeți plini, mandibulă rotunjită.
+IFV ≤ 1.15
+1.15 ≤ IZG ≤ 1.30
+0.95 ≤ IFM ≤ 1.05
+1.00 ≤ IFZF ≤ 1.25
+3️. Față PĂTRATĂ
+Lățimea feței apropiată de înălțime, pomeți ≈ mandibulă, frunte ≈ mandibulă.
+IFV ≤ 1.15
+0.95 ≤ IZG ≤ 1.05      # pomeți ≈ mandibulă
+0.95 ≤ IFM ≤ 1.05      # frunte ≈ mandibulă
+0.90 ≤ IFZF ≤ 1.15
+4️. Față RECTANGULARĂ
+Față lungă, dar cu frunte ≈ mandibulă, pomeți ≈ mandibulă.
+1.35 <  IFV ≤ 1.45
+0.90 ≤ IZG ≤ 1.10
+0.90 ≤ IFM ≤ 1.10
+0.90 ≤ IFZF ≤ 1.15
+5️. Față OBLONG
+Față foarte lungă, ușor mai lată la pomeți, dar frunte ≈ mandibulă.
+IFV > 1.45
+1.05 ≤ IZG ≤ 1.25
+0.90 ≤ IFM ≤ 1.10
+1.00 ≤ IFZF ≤ 1.25
+6️. Față TRIUNGHIULARĂ
+(sus mai lată, jos mai îngustă)
+Frunte mai lată decât mandibula, pomeți moderați, fața tinde să fie medie–lungă.
+IFM > 1.10            # frunte > mandibulă
+IFV ≥ 1.25
+1.00 ≤ IZG ≤ 1.30
+1.00 ≤ IFZF ≤ 1.30
+7️. Față TRIUNGHIULARĂ INVERSATĂ
+(jos mai lat, sus mai îngust)
+Mandibula mai lată decât fruntea; pomeți aproape de mandibulă; fața poate fi medie sau lungă.
+IFM < 0.90            # frunte < mandibulă
+IZG ≥ 1.00            # pomeți ≥ mandibulă
+IFV ≥ 1.20
+0.95 ≤ IFZF ≤ 1.25
+8️. Față DIAMANT
+Pomeți mult mai lați decât fruntea și mandibula; față medie ca lungime.
+1.15 ≤ IFV ≤ 1.35
+IZG  ≥ 1.30           # pomeți mult > mandibulă
+IFZF ≥ 1.25           # pomeți mult > frunte
+0.90 ≤ IFM ≤ 1.10     # frunte ≈ mandibulă (ambele înguste)
+9️. Față INIMĂ
+Frunte mai lată, mandibulă îngustă, pomeți destul de proeminenți, față medie.
+1.15 ≤ IFV ≤ 1.35
+IFM  > 1.10           # frunte > mandibulă
+1.15 ≤ IZG ≤ 1.30
+1.10 ≤ IFZF ≤ 1.30
+10. Față TRAPEZOIDALĂ
+Ușor mai lată jos decât sus (dar nu extrem ca triunghiul inversat), față mai degrabă scurtă–medie.
+IFV ≤ 1.25
+IFM < 0.95            # mandibula puțin > frunte
+0.95 ≤ IZG ≤ 1.15     # pomeți ≈ mandibulă (fără diferențe mari)
+0.95 ≤ IFZF ≤ 1.20
+Cum se procedează practic
+Măsori H, W, J, F (manual sau din coordonate).
+Calculezi cei 4 indici: IFV, IZG, IFM, IFZF.
+Compari cu formulele de mai sus și vezi în ce „cutie” intră subiectul.
+Dacă se potrivește în 2 forme, te uiți la:
+unghiul mandibulei (mai rotund vs. mai angular)
+convexitatea obrajilor (mai plini → rotund/inimă, mai plați → rectangular/oblong etc.).
+0. Ce intră în algoritm (input)
+Ai nevoie de coordonatele (x, y) ale unor repere faciale (landmarks) sau, dacă lucrezi manual, de distanțe măsurate pe fotografie (în mm sau pixeli, important e să fie toate în aceeași unitate):
+Zygion stânga / dreapta → ZL, ZR (lățimea pomeților)
+Gonion stânga / dreapta → GL, GR (lățimea mandibulei)
+Frontotemporale stânga / dreapta → FL, FR (lățimea frunții)
+Nasion → N (la bază nasului dintre ochi)
+Menton → M (vârful bărbiei)
+Opțional (pentru rafinare):
+Trichion (linia părului central)
+Obrajii / convexitatea laterală (dacă vrei și volum, nu doar os)
+1. Distanțe de bază
+Notăm:
+H = distanță(N, M)                 # înălțimea feței (practic Z1+Z2+Z3 fără linia părului)
+W = distanță(ZL, ZR)               # lățimea la pomeți (bizigomatică)
+J = distanță(GL, GR)               # lățimea mandibulei (bigonială)
+F = distanță(FL, FR)               # lățimea frunții
+Dacă ai coordonate (x,y), distanța e clasicul:
+dist(A,B) = sqrt( (Ax - Bx)^2 + (Ay - By)^2 )
+2. Indicii obiectivi (formule)
+Definim câțiva indici-cheie:
+IFV  = H / W        # indice facial vertical (înălțime vs. lățime)
+IZG  = W / J        # indice zigomato-gonial (pomeți vs. mandibulă)
+IFM  = F / J        # indice fronto-mandibular (frunte vs. mandibulă)
+IFZF = W / F        # indice zigomato-frontal (pomeți vs. frunte)
+Heuristica generală:
+IFV → cât de lungă vs. lată e fața
+IZG → cât ies pomeții vs. maxilarul (diamant, inimă, rotund etc.)
+IFM → dacă e mai lat sus sau jos (triunghi / triunghi inversat)
+IFZF → ajută la diferențiere oval / inimă / diamant
+3. Praguri (numeric, ajustabile)
+Poți folosi următoarele praguri orientative (bun punct de plecare):
+# IFV – raport înălțime / lățime
+IFV < 1.15        -> față joasă / lată (rotundă / pătrată / trapezoidală)
+1.15 – 1.35       -> față medie (ovală / inimă / diamant / trapezoid etc.)
+IFV > 1.35        -> față lungă (rectangulară / oblong / unele triunghiulare)
+# IZG – raport pomeți / mandibulă
+IZG ~ 1.00        -> pomeți ≈ mandibulă (pătrată / rectangulară / trapezoid ușor)
+IZG 1.10 – 1.25   -> pomeți puțin mai lați (oval / inimă)
+IZG  > 1.30       -> pomeți mult mai lați decât mandibula (diamant, uneori inimă)
+# IFM – raport frunte / mandibulă
+IFM > 1.10        -> frunte mai lată decât mandibula (triunghi / inimă)
+IFM < 0.90        -> mandibulă mai lată decât fruntea (triunghi inversat / trapezoidal)
+0.90 – 1.10       -> frunte ≈ mandibulă (oval / pătrat / dreptunghi / rotund)
+# IFZF – pomeți / frunte (ajută la diamant vs inimă vs oval)
+IFZF ~ 1.0–1.1    -> frunte ≈ pomeți -> oval, rectangular
+IFZF 1.1–1.3      -> pomeți > frunte -> inimă
+IFZF > 1.3        -> pomeți >> frunte -> diamant
+„~” înseamnă „în jur de” (vei folosi intervale, nu valori exacte).
+4. Algoritm decizional pentru cele 10 forme
+PASUL 1 – clasificare pe lungime (IFV)
+if IFV < 1.15:
+lungime = "scurta"
+elif IFV <= 1.35:
+lungime = "medie"
+else:
+lungime = "lunga"
+PASUL 2 – analizezi raportul sus–jos (IFM) și pomeți–mandibulă (IZG)
+După ce știi dacă fața e scurtă / medie / lungă, intri pe ramuri:
+A. GRUPUL „SCURTĂ / LATĂ” (IFV < 1.15)
+if abs(IZG - 1.0) <= 0.05 and IFM in [0.9, 1.1]:
+-> FAȚĂ PĂTRATĂ
+elif IZG > 1.25 and IFM in [0.9, 1.1]:
+-> FAȚĂ ROTUNDĂ (pomeți mult mai ieșiți, mandibulă rotundă)
+elif IFM < 0.9 and IZG ~ 1.0:
+-> FAȚĂ TRAPEZOIDALĂ (mai lat jos, dar nu foarte masiv)
+else:
+-> OVALĂ LARGĂ (oval/rotund intermediar)
+B. GRUPUL „MEDIE” (1.15 ≤ IFV ≤ 1.35)
+Aici apar cele mai multe forme: oval, inimă, diamant, trapezoid.
+if IFM > 1.10:   # frunte mai lată decât mandibula
+if IZG > 1.30 and IFZF > 1.25:
+-> FAȚĂ DIAMANT
+else:
+-> FAȚĂ INIMĂ (frunte lată, mandibulă îngustă, pomeți ieșiți)
+elif IFM < 0.90:  # mandibula mai lată decât fruntea
+if IZG ~ 1.0:
+-> FAȚĂ TRAPEZOIDALĂ (sus mai îngust, jos ceva mai lat)
+else:
+-> TRIUNGHIULARĂ INVERSATĂ (jos mult mai lat, sus clar îngust)
+else:             # frunte ≈ mandibulă
+if IZG > 1.30 and IFZF > 1.3:
+-> FAȚĂ DIAMANT
+elif IZG in [1.10, 1.25]:
+-> OVALĂ
+else:
+-> RECTANGULARĂ SCURTĂ / TRAPEZOID (în funcție de unghiul mandibulei)
+C. GRUPUL „LUNGĂ” (IFV > 1.35)
+if IFM in [0.9, 1.1] and IZG ~ 1.0:
+-> RECTANGULARĂ (frunte ≈ mandibulă, fața lungă)
+elif IFM in [0.9, 1.1] and IZG in [1.10, 1.25]:
+-> OBLONG (față foarte lungă, puțin mai lată la pomeți)
+elif IFM > 1.10:  # sus mai lat
+-> TRIUNGHIULARĂ (tip "intelectual alungit")
+elif IFM < 0.90:  # jos mai lat
+-> TRIUNGHIULARĂ INVERSATĂ ALUNGITĂ (executiv dur)
+else:
+-> OVAL ELONGAT / OBLONG (în funcție de mandibulă)
+
+
+=================================
+--- Masuratori Frunte.docx ---
+=================================
+Fruntea
+REPERE ANTROPOMETRICE
+Puncte
+Tr
+●
+│
+FtL ●───┼───● FtR
+│
+● G
+│
+● N
+Notă Tr’ (estimare)
+Dacă linia părului este instabilă:
+Tr’ se plasează proporțional față de segmentul N–G
+uzual:
+Tr’–G ≈ 1.8 – 2.1 × (N–G) (♂/♀ diferit)
+Repere și linii
+Tr
+●
+╲   ← Fp (planul frunții)
+╲
+● G
+│
+│ VL (verticală facială)
+│
+● N
+Unghiuri și proiecție
+Rapoarte și indici standardizați
+1. Verticalitate
+R1 = Tr–G / N–Me
+(proporția frunții din fața totală)
+2. Lățime relativă
+R2 = FtL–FtR / ZyL–ZyR (dacă ai zigomaticii)
+sau FtL–FtR / Tr–G (alternativ)
+3. Înclinare (profil)
+R3 = unghi Fp–VL
+4. Dominanță glabelară
+R4 = G–VL (mm)
+TIPOLOGII MORFOLOGICE ALE FRUNȚII
+1. După înălțime
+Frunte joasă → R1 < 0,30
+Frunte medie → 0,30–0,35
+Frunte înaltă → > 0,35
+2. După lățime
+Îngustă / Medie / Lată → R2
+3. După profil
+Retrasă / Neutră / Proiectată → R3
+4. După relief
+Plată → R4 mic
+Glabelară → R4 mare
+Bombată → R3 pozitiv + R4 mediu
+Angulară → F7 mic (unghi fronto-nazal ascuțit)
+SIMETRIE ȘI CONVERGENȚĂ
+Versiune ♂ / ♀ cu praguri diferențiate
+ÎNĂLȚIME FRUNTE – PRAGURI ♂ / ♀
+🔹 R1 = Tr–G / N–Me
+LĂȚIME FRUNTE – PRAGURI ♂ / ♀
+🔹 R2 = FtL–FtR / Tr–G
+ÎNCLINARE FRUNTE (PROFIL) – ♂ / ♀
+🔹 R3 = Unghi Fp – VL
+RELIEF GLABELAR – PRAGURI ♂ / ♀
+🔹 R4 = G – VL (mm)
+UNGHI FRONTO-NAZAL – ♂ / ♀
+🔹 F7 = Unghi Tr–N–G
+SIMETRIE FRONTALĂ – PRAGURI ♂ / ♀
+
+
+=================================
+--- Masuratori barbie.docx ---
+=================================
+Bărbie
+REPERE ANTROPOMETRICE – BĂRBIE
+Puncte cheie utilizate (standard antropometrie):
+Măsurători primare
+🔹 2.1. Dimensiuni liniare
+Unghiuri relevante
+INDICI ȘI RAPOARTE STANDARDIZATE
+1. Raporturi verticale
+Praguri uzuale
+R1 < 0,30 → bărbie joasă
+R1 = 0,30–0,36 → normal
+R1 > 0,36 → bărbie înaltă
+2. Proiecție (profil)
+Praguri orientative (profil):
+Pg < −2 mm → retrus
+−2 … +2 mm → neutru
++2 mm → protrus
+3. Lățime vs înălțime
+< 0,75 → îngust
+0,75–0,95 → mediu
+0,95 → lat
+TIPOLOGII MORFOLOGICE ALE BĂRBIEI
+1. Tip vertical
+2. Tip de proiecție (profil)
+3. Tip transversal
+Formă geometrică frontală
+SIMETRIE ȘI AXIALITATE (BILATERAL)
+Prag uzual:
+2 mm deviație → asimetrie structurală
+Versiunea diferențiată ♂ / ♀ pentru bărbie
+REPERE FOLOSITE (identice ♂ / ♀)
+Sn, Li, Me, Pg, GoL / GoR
+Linia verticală facială (VL)
+Linia mediană facială
+DIMENSIUNI VERTICALE – PRAGURI ♂ / ♀
+🔹 Raport R1 = Li–Me / Sn–Me
+Observație:
+♀ are etaj inferior facial relativ mai lung
+aceeași valoare absolută → clasificare diferită
+PROIECȚIE ÎN PROFIL – Pg față de VL
+🔹 R3 = Pg – VL (mm)
+Masculin:
+toleranță mai mare la retruzie fără a schimba tipul
+LĂȚIME MENTONIALĂ – RAPORT R5
+🔹 R5 = Lățime menton / Li–Me
+Masculin:
+lățimea mare este normativă
+♀:
+aceeași lățime → deja „lată” morfologic
+UNGHIURI MENTONIALE – PRAGURI ♂ / ♀
+🔹 C6 = Unghi mento-labial (Li–Pg–Me)
+FORMĂ FRONTALĂ – CRITERII ♂ / ♀
+Cleft-ul:
+♂: adâncime > 1,5 mm → valid
+♀: > 1,0 mm → deja vizibil morfologic
+SIMETRIE – PRAGURI DIFERENȚIATE
+Integrarea BĂRBIE + MANDIBULĂ + PROFIL INFERIOR
+1) REPERE + LINII (set minim integrat)
+Puncte: Sn, Li, Pg, Me, Gn, GoL/GoR, Tragus (Tr) (opțional).
+Linii de referință:
+Linia mandibulară (ML): Go–Me (pe fiecare parte sau medie)
+Linia de profil inferior (IPL): Sn–Pg (sau Sn–Gn, în funcție de standard)
+Verticala facială (VL): verticală prin Sn (sau prin N, dacă ai punctele superioare)
+2) MĂSURĂTORI CHEIE – BLOCUL „JAW–CHIN”
+A) Mandibulă (structură)
+B) Bărbie (componentă terminală)
+C) Profil inferior (continuitate)
+3) INDICI INTEGRAȚI (cei care „leagă” bărbia de mandibulă)
+3.1. „Dominanță mentonială în raport cu mandibula”
+I1 = (Pg–VL) / (Go–Me mediu)
+Praguri orientative:
+♂: I1 < 0,06 mic; 0,06–0,09 mediu; >0,09 mare
+♀: I1 < 0,05 mic; 0,05–0,08 mediu; >0,08 mare
+3.2. „Robustețe mandibulară relativă” (lățime)
+I2 = GoL–GoR / Sn–Me
+normalizează bigonialul pe etajul inferior.
+Praguri:
+♂: <0,58 îngust; 0,58–0,66 mediu; >0,66 lat
+♀: <0,54 îngust; 0,54–0,62 mediu; >0,62 lat
+3.3. „Menton vs bigonial” (forma bazei feței)
+I3 = lățime menton / GoL–GoR
+<0,34: vârf menton îngust raportat la mandibulă
+0,34–0,40: echilibrat
+0,40: menton lat raportat la mandibulă
+(aceleași praguri la ♂/♀, dar interpretezi tipologic diferit împreună cu I2)
+4) PRAGURI ♂ / ♀
+4.1 Unghi Sn–Pg–Me (JP1)
+Acesta e „semnătura” profilului inferior: cât de „rectilinie” e linia Sn→Pg→Me.
+4.2 Unghi gonial (JM4)
+5) MATRICE „TIP JAW–CHIN” (4×4) – OUTPUT FINAL
+5.1 Mandibulă (M) – pe baza I2 + JM4
+M1 îngustă
+M2 medie
+M3 lată
+M4 lată + unghi gonial închis (jawline pronunțat)
+5.2 Bărbie (C) – pe baza Pg–VL + R1(Li–Me/Sn–Me) + I3
+C1 retrasă
+C2 neutră
+C3 proiectată
+C4 proiectată + menton lat
+5.3 Profil inferior (P) – pe baza JP1 + ML/VL
+P1 convex
+P2 neutru
+P3 rectiliniu
+P4 rectiliniu + ML ridicată (înclinare specifică)
+6) „COERENȚĂ” vs „DISOCIAȚIE” (regulă de control)
+Coerență (OK) dacă:
+M3/M4 + C3/C4 + P2/P3 (susținere structurală)
+M1/M2 + C1/C2 + P1/P2 (profil consistent)
+Disociație (flag) dacă:
+M1 dar C4 (bărbie lată/proiectată fără bază mandibulară)
+M4 dar C1 (jawline puternic cu vârf menton retras)
+JP1 (P1 convex) dar Pg–VL (C3 proiectată) → verifică punctele/poza (eroare de reper sau postură)
+
+
+=================================
+--- Masuratori fata in ansamblu.docx ---
+=================================
+Fața
+LISTA COMPLETĂ – 10 FORME FUNDAMENTALE ALE FEȚEI
+CHEIA DE CITIRE (comună tuturor)
+H/W = înălțime / lățime față
+Zy–Zy = lățime pomeți
+Go–Go = lățime mandibulă
+Tr–Gl / Gl–Sn / Sn–Me = treimi faciale
+Os vs țesut = relief global
+Definiții operaționale
+Z1 (etajul superior): frunte + tâmple + arcade sprâncenare (lățimi/suprafețe sus)
+Z2 (etajul median): pomeți (Zy), orbite, nas (proiecție midface)
+Z3 (etajul inferior): mandibulă (Go–Go), bărbie (Pg/Me), linie mandibulară
+S/T/E
+S = Dominanță structurală (predominanță osoasă / angulară, linii ferme: mandibulă, unghiuri, planuri)
+T = Dominanță de țesut / moliciune (rotunjime, volum de țesut, contururi „soft”)
+E = Dominanță de alungire / verticalitate (ax vertical pronunțat, față “înaltă”)
+Scoruri recomandate: 0–5 (0 = absent, 5 = dominant).
+Tipologie
+1️. OVALĂ (Oval) ➡️ Tip neutru de referință
+Repere obiective
+H/W: ♂ 1.30–1.38 | ♀ 1.32–1.40
+Pomeți ușor dominanți
+Mandibulă rotunjită
+Treimi echilibrate
+Mapare
+Z1: mediu
+Z2: mediu
+Z3: mediu
+S/T/E
+S: 3
+T: 3
+E: 3
+2️. ROTUNDĂ (Round)
+Repere
+H/W < 1.30
+Lățime dominantă
+Obraji plini
+Relief moale
+Mapare
+Z1: scăzut
+Z2: ridicat
+Z3: scăzut
+S/T/E
+S: 2
+T: 4
+E: 4
+3️. DREPTUNGHIULARĂ / OBLONG
+Repere
+H/W > 1.38
+Lățime constantă sus–jos
+Față inferioară lungă
+Relief osos
+Mapare
+Z1: mediu
+Z2: scăzut
+Z3: ridicat
+S/T/E
+S: 4
+T: 3
+E: 2
+4️. PĂTRATĂ (Square)
+Repere
+H/W ≈ 1.30
+Go–Go ≈ Zy–Zy
+Unghiuri mandibulare clare
+Relief osos puternic
+Mapare
+Z1: ridicat
+Z2: mediu
+Z3: ridicat
+S/T/E
+S: 4
+T: 4
+E: 3
+5️. DIAMANT (Diamond)
+Repere
+Zy–Zy maxim
+Frunte și mandibulă înguste
+Contrast osos accentuat
+Mapare
+Z1: mediu
+Z2: ridicat
+Z3: mediu
+S/T/E
+S: 3
+T: 4
+E: 4
+6️. TRIUNGHIULARĂ INVERSATĂ (Heart)
+Repere
+Frunte lată
+Pomeți dominanți
+Mandibulă îngustă
+Mapare
+Z1: scăzut
+Z2: ridicat
+Z3: scăzut
+S/T/E
+S: 2
+T: 4
+E: 4
+7️. TRIUNGHIULARĂ (Pear)
+Repere
+Frunte îngustă
+Mandibulă lată
+Greutate jos
+Mapare
+Z1: ridicat
+Z2: scăzut
+Z3: ridicat
+S/T/E
+S: 4
+T: 3
+E: 2
+8️. ALUNGITĂ (Long / Elongated)
+Repere
+H/W foarte mare (>1.42)
+Față inferioară dominantă
+Verticalitate accentuată
+Mapare
+Z1: mediu
+Z2: scăzut
+Z3: foarte ridicat
+S/T/E
+S: 4–5
+T: 3
+E: 1–2
+9️. HEXAGONALĂ (Softened Square)
+Repere
+Similar pătrată, dar colțuri rotunjite
+Pomeți și mandibulă echilibrate
+Relief moderat
+Mapare
+Z1: ridicat
+Z2: mediu
+Z3: mediu
+S/T/E
+S: 4
+T: 3
+E: 3
+10. TRAPEZOIDALĂ (Trapezoid)
+Repere
+Lățime mare jos
+Frunte medie
+Stabilitate structurală clară
+Mapare
+Z1: ridicat
+Z2: mediu–scăzut
+Z3: ridicat
+S/T/E
+S: 4
+T: 3
+E: 2
+FAȚA ÎN ANSAMBLU — abordare tehnică ♂ / ♀
+(structură globală, proporții, simetrie, relief, coerență)
+1️. DIMENSIUNI & PROPORȚII GLOBALE
+Măsurători standard
+H = înălțime facială totală (Tr–Me)
+W = lățime facială maximă (Zy–Zy)
+Raport H/W
+Treimi faciale:
+Tr–Gl / Gl–Sn / Sn–Me
+Raport față mediană / față inferioară
+♂ BĂRBAȚI — praguri
+Scor 0–5 (♂):
+0–1: față compactă / lată
+2–3: față echilibrată
+4–5: față alungită / structurată
+♀ FEMEI — praguri
+Scor 0–5 (♀):
+0–1: față rotundă
+2–3: față armonioasă
+4–5: față alungită / elegantă
+2️. SIMETRIE & AXIALITATE
+Măsurători
+Deviație față de linia mediană (mm)
+Diferențe L/R (Zy, Go, Ch, Ochi, Sprâncene)
+Înclinare ax facial (°)
+Scor 0–5 (♂ / ♀):
+0–1: asimetrie evidentă
+2–3: asimetrie funcțională
+4–5: simetrie ridicată
+3️. RELIEF & TEXTURĂ GLOBALĂ
+Indicatori
+Contrast os / țesut
+Claritate planuri faciale
+Continuitate zone (frunte–midface–inferior)
+Scor 0–5:
+0–1: relief difuz
+2–3: relief coerent
+4–5: relief bine definit
+4️. COERENȚĂ STRUCTURALĂ (cheie esențială)
+Măsoară cât de bine “leagă” fața componentele între ele
+Evaluare
+Pomeți ↔ mandibulă
+Frunte ↔ midface
+Inferior ↔ verticalitate globală
+Scor 0–5:
+0–1: față fragmentată
+2–3: față funcțională
+4–5: față integrată
+5️. SINTEZĂ SCOR — FAȚA ÎN ANSAMBLU
+Structură scorare recomandată
+FAȚĂ GLOBALĂ =  0.25 × Proporții + 0.20 × Simetrie + 0.20 × Relief + 0.20 × Coerență + 0.15 × Verticalitate
+➡️ Output: scor 0–5
+Praguri diferențiate pentru principalele criterii care decid tipul de față
+1) Raportul H/W (înălțime / lățime)
+2) Raport mandibulă / pomeți (Go–Go / Zy–Zy)
+3) Raport frunte / pomeți (FrW / Zy–Zy)
+(FrW = lățime frunte la nivel temporal/”temple width”, măsurată consistent)
+4) Dominanța zigomatică (Zy–Zy vs rest)
+Regula simplă (cum se aplică practic)
+Alegi banda H/W (Round / Oval / Oblong / Long) cu praguri ♂ sau ♀.
+Apoi diferențiezi cu rapoartele:
+Go/Zy (mandibulă vs pomeți)
+Fr/Zy (frunte vs pomeți)
+„Zy peak” (diamond/heart)
+Tipul final = combinația care îndeplinește cele mai multe criterii.
+Praguri ♂ / ♀ standardizate pentru cele 10 tipuri fundamentale de fețe
+NOTE METODOLOGICE (valabile pentru toate tipurile)
+FH = înălțime facială totală (Tr–Me)
+FW = lățime facială maximă (Zy–Zy)
+JW = lățime mandibulară (Go–Go)
+CW = lățime frunte (Ft–Ft)
+CI (Facial Index) = FH / FW
+Unghi mandibular = Go–Me–Go
+Valorile sunt intervale funcționale, nu puncte fixe (permit variație reală)
+1. FAȚĂ OVALĂ
+Definiție: echilibru global, fără dominanțe structurale
+2. FAȚĂ ROTUNDĂ
+Definiție: lățime dominantă, verticalitate redusă
+3. DREPTUNGHIULARĂ / OBLONG
+Definiție: verticalitate mare, lățimi constante
+4. FAȚĂ PĂTRATĂ (SQUARE)
+Definiție: egalitate verticală + mandibulă dominantă
+5. DIAMANT
+Definiție: pomeți maximi, frunte + mandibulă înguste
+6. TRIUNGHIULARĂ INVERSATĂ (HEART)
+Definiție: frunte dominantă, mandibulă redusă
+7. TRIUNGHIULARĂ (PEAR)
+Definiție: mandibulă dominantă, frunte îngustă
+8. FAȚĂ ALUNGITĂ (LONG)
+Definiție: verticalitate extremă, lățime minimă
+9. HEXAGONALĂ (SOFTENED SQUARE)
+Definiție: pătrată „rotunjită”, fără unghiuri dure
+10. TRAPEZOIDALĂ
+Definiție: lățime crescătoare de sus în jos (jaw-heavy)
+UTILIZARE PRACTICĂ (rapid)
+Tipul de față = ≥70% criterii îndeplinite
+Dacă două tipuri de fețe sunt apropiate → tip primar + tip secundar
+Pragurile ♂/♀ se aplică înainte de maparea Z1/Z2/Z3
+Mapare pe cele 10 tipuri de fețe → Z1/Z2/Z3 + S/T/E
+1) Ovală
+Z1=3 | Z2=3 | Z3=3 (echilibru)
+S=3 | T=3 | E=3
+2) Rotundă
+Z1=3 | Z2=3 | Z3=2 (fără dominanță clară; contur “plin”)
+S=1 | T=5 | E=1
+3) Dreptunghiulară / Oblong
+Z1=3 | Z2=3 | Z3=3 (lățimi relativ constante, dar “înalt”)
+S=3 | T=2 | E=5
+4) Pătrată (Square)
+Z1=3 | Z2=3 | Z3=5 (mandibulă + unghiuri dominante)
+S=5 | T=1–2 | E=2
+5) Diamant (Diamond)
+Z1=2 | Z2=5 | Z3=2 (pomeți maximi)
+S=3 | T=2–3 | E=3
+6) Triunghiulară inversată (Heart)
+Z1=5 | Z2=3–4 | Z3=1–2 (sus dominant, jos îngust)
+S=2–3 | T=2–3 | E=3
+7) Triunghiulară (Pear)
+Z1=1–2 | Z2=3 | Z3=5 (jos dominant, sus îngust)
+S=4–5 | T=2 | E=2
+8) Alungită (Long / Elongated)
+Z1=3 | Z2=3 | Z3=3 (echilibrată ca “treimi”, dar foarte verticală)
+S=2–3 | T=1–2 | E=5
+9) Hexagonală (Softened Square)
+Z1=3 | Z2=3–4 | Z3=4 (maxilar puternic, dar fără unghiuri “tăioase”)
+S=4 | T=3 | E=2
+10) Trapezoidală (Trapezoid)
+Z1=2 | Z2=3 | Z3=5 (lățime crescătoare spre bază)
+S=5 | T=2 | E=2
+Reguli de decizie:
+Dacă ai măsurători (CW, Zy–Zy, JW, CI), poți seta scorurile astfel:
+Z1 (0–5) din CW/Zy–Zy
+≥0.97 → 5
+0.93–0.96 → 4
+0.88–0.92 → 3
+0.83–0.87 → 2
+≤0.82 → 1
+Z3 (0–5) din JW/Zy–Zy
+≥0.88 → 5
+0.84–0.87 → 4
+0.78–0.83 → 3
+0.72–0.77 → 2
+≤0.71 → 1
+Z2 (0–5) din “dominanta pomeților” (comparativ cu CW și JW):
+dacă Zy–Zy/CW ≥ 1.18 și Zy–Zy/JW ≥ 1.15 → Z2=5 (Diamond)
+altfel, Z2 se duce spre 3–4 în funcție de cât depășește Zy–Zy celelalte lățimi.
+E (0–5) din CI = FH/FW (se poate separa pe ♂/♀ după pragurile tale):
+≥1.60 → 5
+1.50–1.59 → 4
+1.38–1.49 → 3
+1.30–1.37 → 2
+≤1.29 → 1
+S vs T:
+S crește când JW mare + unghi mandibular mic (mai “angular”)
+T crește când contururile sunt rotunjite, fără “colțuri” evidente (nu doar lățime)
+Schemă deterministă
+1) Intrări (minime)
+CW = frunte (Ft–Ft)
+FW = lățime față (Zy–Zy)
+JW = mandibulă (Go–Go)
+FH = înălțime (Tr–Me)
+A = unghi mandibular (Go–Me–Go), opțional dar ajută mult
+Derivate:
+r1 = CW/FW
+r3 = JW/FW
+CI = FH/FW
+2) Convertim în scoruri 0–5 (aceleași praguri ca mai sus)
+Z1 din r1 = CW/FW
+r1 ≥ 0.97 → Z1=5
+0.93–0.96 → 4
+0.88–0.92 → 3
+0.83–0.87 → 2
+≤ 0.82 → 1
+Z3 din r3 = JW/FW
+r3 ≥ 0.88 → Z3=5
+0.84–0.87 → 4
+0.78–0.83 → 3
+0.72–0.77 → 2
+≤ 0.71 → 1
+E din CI = FH/FW
+CI ≥ 1.60 → E=5
+1.50–1.59 → 4
+1.38–1.49 → 3
+1.30–1.37 → 2
+≤ 1.29 → 1
+Angularitate (S) din unghi A (opțional)
+A ≤ 118° → Sboost = +1
+119–125° → Sboost = 0
+≥ 126° → Sboost = −1
+(Doar ca “ajustor” pentru Square/Trapezoid vs Hexagonal/Round.)
+3) „Vectorul” feței (semnătura numerică)
+Construim 3 axe simple:
+U = Z1 − 3 (dominanta sus)
+L = Z3 − 3 (dominanta jos)
+V = E − 3 (verticalitate)
+Interpretare:
+U mare (+) → Heart
+L mare (+) → Square/Trapezoid/Pear
+V mare (+) → Oblong/Long
+4) Scor pe fiecare tip (0–100) – reguli fixe
+Fiecare tip are o țintă (target) pentru (Z1, Z3, E).
+Scorul = 100 − 12·|Z1−tZ1| − 12·|Z3−tZ3| − 10·|E−tE|
+Ținte recomandate:
+Oval: t(3,3,3)
+Round: t(3,2,1) dar cu penalizare dacă E≥3 (round nu e înalt)
+Oblong: t(3,3,4)
+Square: t(3,5,2) + dacă A ≤ 120°
+Diamond: t(2,2,3) + condiție: FW „maxim” relativ (vezi nota)
+Heart: t(5,2,3)
+Pear: t(2,5,2)
+Long: t(3,3,5)
+Hexagonal: t(3,4,2) + dacă A în 122–130° (mai soft)
+Trapezoid: t(2,5,2) + dacă JW/CW ≥ 1.15
+Notă pentru Diamond (ca să nu iasă fals)
+Diamond cere „midface widest”. Dacă ai doar CW/FW/JW și FW=Zy–Zy deja, folosești condiția:
+dacă r1 ≤ 0.90 și r3 ≤ 0.80, atunci Diamond e eligibil (altfel penalizare −15)
+
+
+=================================
+--- Masuratori gura.docx ---
+=================================
+Gura
+REPERE ANTROPOMETRICE (STANDARD)
+MĂSURĂTORI LINEARE (INPUT PRIMAR)
+2.1 Dimensiuni principale
+RAPOARTE STANDARDIZATE (INDICI)
+Indici de bază
+(Bizygomatic = ZyL–ZyR; NH = N–Sn)
+UNGHIURI ȘI POZIȚIONĂRI
+TIPOLOGII MORFOLOGICE
+1 După lățimea gurii (IMW)
+2 După grosimea buzelor (IGB)
+3 Raport buză superioară / inferioară (ITB)
+4 Comisuri (static)
+5 SIMETRIE ȘI AXIALITATE (L/R)
+Praguri ♂/♀ distincte, numerice, pentru gură & buze, pe indici + simetrie
+Convenții:
+MW = ChL–ChR (lățime gură)
+ZyW = ZyL–ZyR (lățime bizigomatică)
+UTH = Ls–Sto (grosime buză sup.)
+LTH = Sto–Li (grosime buză inf.)
+TLT = UTH+LTH (grosime totală)
+ULH = Sn–Sto (înălțime buză sup / înălțime vermilion superioară, după cum măsori constant)
+LLH = Sto–Sl (inferior)
+1) Lățimea gurii (proporțional) — IMW = MW / ZyW × 100
+2) Volum buze (relativ) — IGB = TLT / MW × 100
+3) Raport buză superioară / inferioară — ITB = UTH / LTH
+(Practic: dacă ITB e mic → buza de jos e mai groasă; dacă e mare → buza de sus e mai groasă.)
+4) Raport vertical (înălțimi) — IVV = ULH / LLH
+5) Comisuri (înclinare / poziție) — ΔCh = (ChR_y − ChL_y) și poziție față de Sto
+Aici sunt 2 praguri utile:
+A) Diferență L/R (asimetrie comisuri) — exprimată relativ: |ΔCh| / MW × 100
+B) Comisuri global (ambele colțuri) față de Sto (pe verticală)
+Definești: Ch_avg_y − Sto_y (medie comisuri minus stomion), în mm sau pixeli calibrați.
+6) Deviație mediană a gurii — DevSto = |Sto_x − mid(ChL,ChR)| / MW × 100
+7) Praguri “ready-to-score” (0–5) — dacă vrei direct scalare
+Un model simplu (aplicabil la fiecare index) este:
+0 = extrem îngust/subțire (sub “foarte”)
+1 = “foarte îngust/subțire”
+2 = “îngust/subțire”
+3 = “mediu”
+4 = “larg/plin”
+5 = “foarte larg/foarte plin”
+Îți pot scrie imediat și intervalele exacte 0–5 pentru fiecare (IMW, IGB, ITB, IVV, simetrie), în format “ID–prag ♂/♀–text permis”.
+
+
+=================================
+--- Masuratori nas.docx ---
+=================================
+Nasul
+1. REPERE ANTROPOMETRICE STANDARD
+2. MĂSURĂTORI LINEARE
+(Dimensiuni absolute)
+3. RAPOARTE STANDARDIZATE
+(Indici)
+4. UNGHIURI ANTROPOMETRICE
+5. TIPOLOGII MORFOLOGICE
+5.1 După profil
+5.2 După bază
+5.3 După vârf
+6. SIMETRIE ȘI AXIALITATE (L/R)
+Praguri ♂/♀ — Indici (rapoarte)
+A. Indice nazal (IN) = NW / NH × 100
+NW = AlL–AlR (lățime)
+NH = N–Sn (înălțime)
+B. Indice proiecție vârf (IP) = PT / NH
+PT = Sn–Prn (proiecția vârfului)
+C. Indice bază (IB) = NW / PT
+(arată cât de “expansivă” e baza raportat la proiecție)
+D. Indice lungime/înălțime (IL) = NL / NH
+NL = N–Prn (lungime)
+2) Praguri ♂/♀ — Unghiuri
+A. Unghi nasolabial (NLA)
+(rotația vârfului vs buza superioară)
+B. Unghi nasofrontal (NFA)
+(tranziția frunte–rădăcina nasului)
+C. Unghi dorsal (convexitate/concavitate) – dacă îl măsori
+(în practică se evaluează deseori semi-automat din profil)
+3) Praguri ♂/♀ — Asimetrie & deviație (L/R)
+A. Asimetrie bază: ΔNW = |(AlL–M) – (AlR–M)|
+(unde M e linia mediană)
+B. Deviație vârf (Prn față de mediană)
+4) “Clasificator” rapid (Excel-friendly)
+Poți eticheta automat nasul astfel:
+IN → îngust/mediu/larg
+IP → proiecție mică/medie/mare
+NLA → vârf în jos/neutru/în sus
+IB → bază compactă/medie/expansivă
+Simetrie → mică/moderată/mare
+Rezultă un “cod” de tip:
+IN(Mediu) + IP(Mare) + NLA(Neutru) + IB(Compactă) + Simetrie(Mică)
+
+
+=================================
+--- Masuratori ochi.docx ---
+=================================
+Ochii
+Ochi de căprioară
+Ochi de cămilă
+Ochi de cal
+Ochiul de cal greu
+Ochi de vultur
+Ochi de bufniță
+Ochi de păun
+Ochii de păun ,.înalt"
+Ochi de struț
+Ochi de tigru
+Ochi de leu
+Ochi de pisică
+Ochi de vulpe
+Ochi de balenă
+Ochi de delfin
+Ochi semilună
+Ochi lună nouă
+Lista aparține unui sistem metaforic zoomorf, folosit istoric pentru:
+memorabilitate
+descriere vizuală rapidă
+transmitere orală / simbolică
+ATLAS COMPLET – TIPOLOGII DE OCHI (DESCRIPTIV)
+I. Tipologii după FORMĂ (contur palpebral)
+1. Ochi migdalați
+contur oval-alungit
+colțuri interne și externe ascuțite
+ax predominant orizontal
+2. Ochi rotunzi
+deschidere aproape circulară
+sclera vizibilă sus și jos
+colțuri mai puțin ascuțite
+3. Ochi alungiți
+fanta palpebrală lungă
+înălțime mică
+impresie de ochi „îngust”
+4. Ochi înguști
+deschidere verticală redusă
+pleoape apropiate
+formă aproape liniară
+II. Tipologii după DIMENSIUNE APARENTĂ
+5. Ochi mici
+deschidere palpebrală redusă
+iris ocupă mare parte din fanta vizibilă
+6. Ochi medii
+proporție echilibrată
+raport standard iris–pleoapă
+7. Ochi mari
+deschidere amplă
+sclera vizibilă
+iris aparent mai mic raportat la deschidere
+III. Tipologii după PROFUNZIME (ochi–orbită)
+8. Ochi adânciți
+glob ocular retras în orbită
+arcade sprâncenare dominante
+umbrire accentuată
+9. Ochi proeminenți
+glob ocular avansat
+relief ocular evident
+pleoape mai tensionate
+10. Ochi neutri (aliniați)
+glob poziționat median în orbită
+fără impresie de retragere sau proeminență
+IV. Tipologii după ORIENTARE (ax)
+11. Ochi orizontali
+colțuri la același nivel
+ax neutru
+12. Ochi ascendenți
+colț extern mai sus decât cel intern
+ax oblic pozitiv
+13. Ochi descendenți
+colț extern mai jos
+ax oblic negativ
+V. Tipologii după DISTANȚARE
+14. Ochi apropiați
+distanță interoculară < lățimea unui ochi
+15. Ochi distanțați
+distanță interoculară > lățimea unui ochi
+16. Ochi echilibrați
+distanță ≈ lățimea unui ochi
+VI. Tipologii după STRUCTURA PLEOAPELOR
+17. Ochi cu pleoapă definită
+pliu palpebral clar
+separare netă pleoapă–orbită
+18. Ochi cu pleoapă grea (hooded)
+pliu acoperit parțial
+țesut suprapus peste fanta oculară
+19. Ochi fără pliu (monolid)
+pleoapă superioară netedă
+lipsă delimitare palpebrală
+20. Ochi cu pleoapă căzută (ptoza)
+margine palpebrală coborâtă
+acoperire parțială a irisului
+VII. Tipologii după SIMETRIE
+21. Ochi simetrici
+formă, dimensiune și poziție similare bilateral
+22. Ochi asimetrici
+diferențe vizibile L/R
+pot fi de formă, poziție sau deschidere
+Setul complet de măsurători obiective, reproductibile și comparabile
+PRINCIPIU GENERAL
+Tipologia ochilor NU se stabilește printr-o singură măsură, ci printr-un vector de parametri cuantificați, normalizați raportat la față.
+Vom lucra cu:
+puncte antropometrice standard
+rapoarte (nu valori brute)
+diferențe L/R
+unghiuri
+indici compoziți
+PUNCTE ANTROPOMETRICE DE REFERINȚĂ (ochi)
+1️. DIMENSIUNI LINEARE (baza clasificării)
+🔹 A. Lățimea ochiului (apertura orizontală)
+Ex–En (mm)
+👉 diferențiază:
+ochi înguști vs. largi
+ochi migdalați vs. rotunzi
+Praguri uzuale (raportate la lățimea feței):
+< 0,24 → ochi înguști
+0,24–0,28 → medii
+> 0,28 → largi
+🔹 B. Înălțimea ochiului (apertura verticală)
+Ps–Pi (mm)
+👉 separă:
+ochi rotunzi
+ochi migdalați
+ochi „tăiați”
+🔹 C. Raport de formă (INDICE CHEIE)
+R₁ = (Ps–Pi) / (Ex–En)
+2️. POZIȚIONARE ȘI ORIENTARE
+🔹 D. Unghiul canthal (înclinație)
+(Ex–En față de orizontală)
+🔹 E. Distanța intercanthală
+En–En (mm) raportată la lățimea ochiului
+3️. PROIECȚIE & PROFUNZIME
+🔹 F. Proeminența globului ocular
+4️. PLEOAPE
+🔹 G. Vizibilitate pleoapă superioară
+Ps → pliul palpebral (mm)
+🔹 H. Acoperire pleoapă inferioară
+Pi → iris (%)
+5️. SIMETRIE BILATERALĂ
+🔹 I. Diferență L/R apertură
+|Δ| = |(Ps–Pi)ₗ − (Ps–Pi)ᵣ|
+🔹 J. Diferență L/R unghi canthal
+|Δ°| = |θₗ − θᵣ|
+6️. INDICI COMPOZIȚI
+🔹 INDICE DE FORMĂ OCULARĂ (IFO)
+IFO = (Ps–Pi) / (Ex–En)
+🔹 INDICE DE ORIENTARE (IO)
+IO = unghi canthal (°)
+🔹 INDICE DE DESCHIDERE PALPEBRALĂ (IDP)
+IDP = Ps–pliu / (Ps–Pi)
+Standardul complet de praguri ♂ / ♀
+Puncte-cheie: En, Ex, Ps, Pi, Pc
+Măsuri primare: Ex–En, Ps–Pi, unghi canthal, pliul palpebral
+Toate valorile sunt exprimate ca rapoarte sau unghiuri (nu mm brute).
+1️. APERTURA ORIZONTALĂ (Ex–En / lățime față)
+🔹 Praguri ♂ / ♀
+Femeile au în medie ochi proporțional mai largi față de față.
+2️. APERTURA VERTICALĂ (Ps–Pi / Ex–En)
+🔹 INDICE DE FORMĂ OCULARĂ – IFO
+Pragul feminin este deplasat în sus (pleoape mai deschise).
+3️. UNGHI CANTHAL (orientare ochi)
+🔹 Praguri ♂ / ♀ (grade)
+4️. DISTANȚA INTERCANTHALĂ (En–En / Ex–En)
+5️. PLEOAPA SUPERIOARĂ – HOODEDNESS
+🔹 INDICE DE DESCHIDERE PALPEBRALĂ – IDP
+IDP = (Ps–pliu palpebral) / (Ps–Pi)
+6️. PROEMINENȚĂ OCULARĂ (3D / profil)
+(raport Pc → plan orbital / adâncime orbitală)
+7️. SIMETRIE BILATERALĂ (L/R)
+🔹 Praguri identice ♂ / ♀
+8️. FIȘĂ STANDARD DE CLASIFICARE (OUTPUT FINAL)
+Tip ocular =
+[Formă ♂/♀] + [Orientare ♂/♀] + [Distanță ♂/♀] + [Pleoapă ♂/♀] + [Simetrie]
+🔹 Exemplu
+♀ – migdalat (IFO 0,33), ascendent (+3,8°), normal distanțat (1,06), pleoapă deschisă (IDP 0,52), simetrie bună
+Sistemul complet de ID-uri standardizate pentru ochi, separat ♂ / ♀
+A. DIMENSIUNI & FORMĂ
+EYE-♂-01 / EYE-♀-01 — Apertură orizontală relativă
+Formula:
+Ex–En / lățime față (Zy–Zy)
+EYE-♂-02 / EYE-♀-02 — Apertură verticală absolută
+Formula:
+Ps–Pi (mm) (normalizată ulterior)
+EYE-♂-03 / EYE-♀-03 — Indice de formă oculară (IFO)
+Formula:
+IFO = (Ps–Pi) / (Ex–En)
+B. ORIENTARE & POZIȚIONARE
+EYE-♂-04 / EYE-♀-04 — Unghi canthal
+Formula:
+∠(Ex–En față de orizontală)
+EYE-♂-05 / EYE-♀-05 — Distanță intercanthală
+Formula:
+En–En / Ex–En
+C. PLEOAPE
+EYE-♂-06 / EYE-♀-06 — Hoodedness (pleoapă superioară)
+Formula:
+IDP = (Ps–pliu palpebral) / (Ps–Pi)
+EYE-♂-07 / EYE-♀-07 — Pleoapă inferioară
+Formula:
+% iris acoperit de Pi
+D. PROIECȚIE / PROFIL
+EYE-♂-08 / EYE-♀-08 — Proeminență oculară
+Formula:
+Pc → plan orbital / adâncime orbită
+E. SIMETRIE (L/R)
+EYE-♂-09 / EYE-♀-09 — Simetrie apertură
+Formula:
+| (Ps–Pi)L − (Ps–Pi)R | / medie
+EYE-♂-10 / EYE-♀-10 — Simetrie orientare
+Formula:
+| unghi L − unghi R |
+
+
+=================================
+--- Masuratori pometi si obraji.docx ---
+=================================
+Pomeți și obraji
+I. POMEȚII (ZIGOMATICII)
+1. Repere antropometrice
+Puncte standard:
+Măsurători primare
+1. Dimensiuni liniare
+2. Proiecție antero-posterioară (profil)
+Rapoarte și indici
+1. Lățime relativă
+RZ1 = ZyL–ZyR / GoL–GoR
+(sau / FtL–FtR dacă mandibula nu e disponibilă)
+2. Poziție verticală
+RZ2 = Zy–Sn / Tr–Sn
+3. Proiecție zigomatică
+RZ3 = Zy–VL (mm)
+2. Tipologii morfologice
+Axele independente:
+Lățime: îngust / mediu / lat
+Poziție: jos / mediu / sus
+Proiecție: plat / neutru / proeminent
+Exemplu descriptiv valid: Pomeți lați, poziție înaltă, proiecție neutră.
+POMEȚII (ZIGOMATICII) — ♂ / ♀
+(structură osoasă, lățime, proiecție, relief)
+Măsurători standard utilizate
+Zy–Zy = lățimea bizigomatică
+Zy–Sn = raport lățime zigomatică / înălțime mediană
+Proiecție zigomatică = distanță max. laterală față de planul facial
+Unghi zigomatic (frontal)
+♂ BĂRBAȚI — praguri orientative
+Scorare 0–5 (♂):
+0–1: pomeți retrași / slabi
+2–3: pomeți echilibrați
+4–5: pomeți proeminenți / dominanți
+♀ FEMEI — praguri orientative
+Scorare 0–5 (♀):
+0–1: pomeți estompați
+2–3: pomeți feminini echilibrați
+4–5: pomeți foarte proeminenți
+II. OBRAJII
+1. Repere antropometrice
+Puncte / zone:
+ChkL / ChkR – punct de maximă convexitate a obrazului
+Zy – reper osos superior
+Ch – comisura bucală
+Sn – reper vertical
+VL – mediană
+Măsurători primare
+1. Convexitate / volum
+2. Distribuție verticală
+Indici standardizați
+1. Plinătate relativă
+RO1 = Chk–VL (mm)
+2. Obraj „înalt” vs „căzut”
+RO2 = Chk–Sn / Tr–Me
+3. Continuitate zigomatică–buccală
+RO3 = Chk–Zy (mm)
+SIMETRIE – POMEȚI & OBRAJI
+OBRAJII — ♂ / ♀
+(țesut moale, volum, tensiune, distribuție)
+Măsurători standard utilizate
+Grosime obraz (palpare / estimare vizuală standardizată)
+Raport os : țesut
+Grad de cădere (ptoză)
+Continuitate pomeți–obraji
+♂ BĂRBAȚI — praguri orientative
+Scorare 0–5 (♂):
+0–1: obraji subțiri / retrași
+2–3: obraji funcționali
+4–5: obraji plini / grei
+♀ FEMEI — praguri orientative
+Scorare 0–5 (♀):
+0–1: obraji plați
+2–3: obraji armonioși
+4–5: obraji plini / rotunzi
+
+
+=================================
+--- Masuratori sprancene.docx ---
+=================================
+Sprâncenele
+REPERE ANATOMICE STANDARD
+Sprânceană
+Br (Brow medial)
+→ punctul cel mai medial al sprâncenei, unde firele încep clar
+→ folosit pentru: lungime (BL), arc (Δh), axă sprânceană
+Bh (Brow highest point)
+→ punctul cu coordonata Y maximă pe conturul sprâncenei
+→ folosit pentru: BED, Δh, BT, tip de arc
+Bt (Brow tail)
+→ punctul cel mai lateral al sprâncenei, unde firele se termină
+→ folosit pentru: lungime (BL), orientare coadă (BTA), axă globală
+Orbită / ochi
+Or (Orbitale superius)
+→ marginea osoasă superioară a orbitei (nu pleoapa!)
+→ folosit pentru: Brow–Eye Distance (BED)
+Regulă: se ia punctul osos estimat, nu pliul pielii
+En (Endocanthion)
+→ colț intern al ochiului (joncțiune pleoape)
+→ folosit pentru: lățime ochi, normalizări
+Ex (Exocanthion)
+→ colț extern al ochiului
+→ folosit pentru: lățime ochi, rapoarte BL/(En–Ex)
+Pu (Pupil center)
+→ centrul pupilei (ochi în poziție neutră, privire înainte)
+→ folosit pentru: axe orizontale, unghiuri (BTA)
+Regiune mediană
+Gl (Glabella)
+→ punct median între sprâncene, pe linia sagitală
+→ folosit pentru: simetrie L/R, referință mediană
+REGULI DE UTILIZARE (critice pentru consistență)
+Capul drept, privire neutră
+Aceeași fotografie pentru toate măsurătorile
+Nu se folosesc expresii faciale (sprâncene ridicate, încruntare)
+Pentru normalizare: folosește mereu En–Ex
+Pentru simetrie: toate coordonatele raportate la Gl
+1️. TIPOLOGII DE FORMĂ (bazate pe GEOMETRIE)
+A. Sprânceană dreaptă (Lineară)
+Definiție: variație verticală minimă
+Criteriu obiectiv:
+Δh = ∣Bhy−Bry∣ < 3 mm
+B. Sprânceană arcuită (Arched)
+Definiție: arc pronunțat, punct maxim clar
+Criteriu:
+Δh ≥ 4–6 mm
+C. Sprânceană unghiulară (Angular)
+Definiție: schimbare bruscă de pantă în Bh
+Criteriu:
+unghi Br–Bh–Bt < 150°
+D. Sprânceană curbată continuu (Rounded)
+Definiție: curbă uniformă, fără colț
+Criteriu:
+variație unghiulară progresivă (fără inflexiune clară)
+2️. POZIȚIA VERTICALĂ (raport sprânceană–ochi)
+Măsurătoare-cheie: Brow–Eye Distance (BED)
+BED = Bhy−Ory
+3️. GROSIMEA SPRÂNCENEI
+Brow Thickness (BT)
+Măsurare perpendiculară pe axa sprâncenei, în zona Bh: BT = margine superioara − margine inferioara
+4️. LUNGIMEA SPRÂNCENEI
+Brow Length (BL)
+BL=distanța Br–Bt
+Raport util (independent de scară):
+R = BL/(En–Ex)
+5️. POZIȚIA COZII (TAIL ORIENTATION)
+Brow Tail Angle (BTA)
+Unghiul dintre linia Br–Bt și linia orizontală pupilară.
+6️. SIMETRIE STÂNGA / DREAPTA (L/R)
+Indicatori cuantificabili:
+🔹 Prag uzual simetrie acceptabilă: ≤ 2 mm
+7️. ORIENTAREA GLOBALĂ (AXA SPRÂNCENEI)
+Brow Axis Angle (BAA)
+Unghiul liniei Br–Bt față de orizontală:
+Repere funcționale:
+1) Praguri ♂ / ♀ — în milimetri
+A. Poziție verticală (BED = Bh_y − Or_y)
+B. Grosime (BT)
+C. Arc / curbură (Δh = |Bh_y − Br_y|)
+D. Orientarea cozii (BTA)
+E. Lungime (BL raportat la ochi: BL / (En–Ex))
+(ăsta e “unitless”, dar îl pun aici ca standard principal)
+2) Praguri ♂ / ♀ — variantă în pixeli
+Ai nevoie doar de coordonate în pixeli (din aceeași fotografie). Normalizarea se face cu Weye = (En–Ex) (lățimea ochiului).
+A. Poziție verticală normalizată
+B. Grosime normalizată
+C. Arc normalizat
+(BTA rămâne în grade, deci nu se normalizează.)
+3) Simetrie L/R — praguri ♂ / ♀
+În mm
+În pixeli
+4) Tipologie finală (OUTPUT standard)
+Pe baza pragurilor de mai sus, rezultatul “curat” arată așa:
+Formă: Dreaptă / Arcuită / Unghiulară / Rotunjită
+Poziție: Joasă / Medie / Înaltă (♂/♀)
+Grosime: Subțire / Medie / Groasă (♂/♀)
+Lungime: Scurtă / Medie / Lungă (♂/♀)
+Coadă: Ascendentă / Orizontală / Descendentă (♂/♀)
+Simetrie: OK / Borderline / Asimetric (♂/♀)
+
+
+=================================
+--- Masuratori urechi.docx ---
+=================================
+Urechile
+1. REPERE ANTROPOMETRICE
+2. MĂSURĂTORI LINEARE
+2.1 Dimensiuni absolute
+3. UNGHIURI ȘI POZIȚIONĂRI
+4. RAPOARTE STANDARDIZATE (INDICI)
+5. TIPOLOGII MORFOLOGICE
+5.1 După mărime
+5.2 După formă generală
+5.3 După lob
+5.4 După poziție față de craniu
+6. SIMETRIE ȘI AXIALITATE (L / R)
+Toate se exprimă relativ (%) la media L/R.
+Praguri ♂/♀ numerice
+Convenții (recomandate):
+EL = Sa–Sba (lungime ureche, mm)
+EW = Pra–Pa (lățime ureche, mm)
+LL = In–L (lungime lob, mm)
+ED = distanță maximă pavilion–mastoid (mm)
+Indici: IE = EW/EL, IL = LL/EL, IP = ED/EW
+1) DIMENSIUNI ABSOLUTE (mm)
+1.1 Lungime ureche — EL (Sa–Sba)
+1.2 Lățime ureche — EW (Pra–Pa)
+1.3 Lob (lungime) — LL (In–L)
+2) INDICI (RAPOARTE)
+2.1 Indice formă ureche — IE = EW / EL
+2.2 Indice lob — IL = LL / EL
+3) PROTRUZIE (ureche lipită vs proeminentă)
+Există două variante
+3.1 Distanță pavilion–craniu — ED (mm)
+3.2 Indice protruzie — IP = ED / EW
+4) SIMETRIE L/R (praguri procentuale)
+Regulă: calculezi diferența relativă:
+Δ% = |L − R| / ((L + R)/2) × 100
+Aplică pentru EL, EW, LL, ED
+(Aceleași praguri la ♂/♀, fiind procentuale.)
+5) “COD” FINAL (clasificare automată, ușor de raportat)
+Poți raporta urechea ca un set de etichete:
+EL (mică/medie/mare)
+IE (alungită/echilibrată/lată)
+IL (lob mic/mediu/mare)
+ED/IP (lipită/neutră/proeminentă)
+Asimetrie (mică/moderată/mare)
+Exemplu:
+EL medie (♂), IE echilibrată, IL mediu, IP neutru, asimetrie mică

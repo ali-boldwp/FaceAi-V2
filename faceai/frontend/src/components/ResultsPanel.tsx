@@ -146,7 +146,19 @@ export function ResultsPanel({ result, onRecalculate, recalculating, onManualTr 
         </div>
       )}
 
-      <MeasurementsTable measurements={result.measurements} ratios={result.ratios} />
+      <MeasurementsTable
+        measurements={result.measurements}
+        ratios={result.ratios}
+        idealFace={result.ideal_face}
+        eyes={result.eyes}
+        forehead={result.forehead}
+        nose={result.nose}
+        mouth={result.mouth}
+        jaw={result.jaw}
+        cheek={result.cheek}
+        eyebrows={result.eyebrows}
+        ears={result.ears}
+      />
       <LandmarksViewer landmarks={result.mandatory_landmarks} warnings={result.warnings} />
 
       {zoomSrc && (

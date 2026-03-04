@@ -192,6 +192,26 @@ h1 {
   font-weight: 600;
 }
 
+.row.row-ideal-ratios {
+  grid-template-columns: 1.8fr 1fr 0.8fr 0.8fr 0.8fr 2fr;
+}
+
+.row.row-ideal-dimensions {
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+}
+
+.row.row-face-indices {
+  grid-template-columns: 1fr 1fr 1fr 1fr 2.2fr;
+}
+
+.row.row-eyes-metrics {
+  grid-template-columns: 1.1fr 2.2fr 1fr 1fr 2fr;
+}
+
+.row.row-eye-classes {
+  grid-template-columns: repeat(5, 1fr);
+}
+
 .warnings {
   background: #fff4ee;
   border: 1px solid #f3c0ad;

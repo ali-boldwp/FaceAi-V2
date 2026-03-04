@@ -1,4 +1,4 @@
-from app.services.facemesh import _points_from_map
+from app.services.facemesh import _inverse_transform_xy, _points_from_map
 
 
 class _Lm:
@@ -8,7 +8,7 @@ class _Lm:
         self.z = z
 
 
-def test_prn_midpoint_from_mesh_points():
+def test_prn_uses_mapped_landmark_when_available():
     landmarks = [
         _Lm(0.0, 0.0, 0.0),  # 0
         _Lm(0.2, 0.3, 0.1),  # 1
@@ -20,9 +20,15 @@ def test_prn_midpoint_from_mesh_points():
 
     points = _points_from_map(landmarks, mapping, width=100, height=200)
 
-    assert points["Prn"]["index"] is None
-    assert points["Prn"]["pixel"]["x"] == 40.0
-    assert points["Prn"]["pixel"]["y"] == 100.0
-    assert points["Prn"]["normalized"]["x"] == 0.4
-    assert points["Prn"]["normalized"]["y"] == 0.5
-    assert points["Prn"]["normalized"]["z"] == 0.3
+    assert points["Prn"]["index"] == 4
+    assert points["Prn"]["pixel"]["x"] == 60.0
+    assert points["Prn"]["pixel"]["y"] == 140.0
+    assert points["Prn"]["normalized"]["x"] == 0.6
+    assert points["Prn"]["normalized"]["y"] == 0.7
+    assert points["Prn"]["normalized"]["z"] == 0.5
+
+
+def test_inverse_transform_rot90_cw():
+    x, y = _inverse_transform_xy(0.2, 0.8, "rot90_cw")
+    assert x == 0.8
+    assert y == 0.8

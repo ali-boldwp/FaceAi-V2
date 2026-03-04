@@ -15,18 +15,18 @@ FROM python:3.11-slim AS app
 WORKDIR /app
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends libgl1 libglib2.0-0 nginx supervisor \
-    && rm -rf /var/lib/apt/lists/*
+  && apt-get install -y --no-install-recommends libgl1 libglib2.0-0 nginx supervisor \
+  && rm -rf /var/lib/apt/lists/*
 
 COPY faceai/backend/requirements.txt /app/backend/requirements.txt
-RUN pip install --no-cache-dir -r /app/backend/requirements.txt
+RUN pip install --no-cache-dir --default-timeout=1000 -r /app/backend/requirements.txt --extra-index-url https://download.pytorch.org/whl/cpu
 
 COPY faceai/backend /app/backend
 COPY --from=frontend-build /frontend/dist /usr/share/nginx/html
 
 RUN set -eux; \
-    rm -f /etc/nginx/sites-enabled/default; \
-    cat > /etc/nginx/conf.d/default.conf <<'EOF'
+  rm -f /etc/nginx/sites-enabled/default; \
+  cat > /etc/nginx/conf.d/default.conf <<'EOF'
 server {
   listen 8000;
   server_name _;
@@ -51,7 +51,7 @@ server {
 EOF
 
 RUN set -eux; \
-    cat > /etc/supervisor/supervisord.conf <<'EOF'
+  cat > /etc/supervisor/supervisord.conf <<'EOF'
 [supervisord]
 nodaemon=true
 

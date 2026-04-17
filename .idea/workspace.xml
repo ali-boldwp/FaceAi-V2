@@ -6,26 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="b3b76b11-5697-4110-b5b7-ca8958ad6822" name="Changes" comment="main">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/backend/app/services/facemesh.py" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/backend/app/services/facemesh.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/backend/app/utils/landmarks_map.json" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/backend/app/utils/landmarks_map.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/backend/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/backend/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/_metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/chunk-373CG7ZK.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/chunk-373CG7ZK.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/chunk-REFQX4J5.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/chunk-REFQX4J5.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/react-dom.js" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/react-dom.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/react-dom.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/react-dom.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/react-dom_client.js" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/react-dom_client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/react-dom_client.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/react-dom_client.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/react.js" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/react.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/react.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/react.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/react_jsx-dev-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/react_jsx-dev-runtime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/react_jsx-dev-runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/react_jsx-dev-runtime.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/react_jsx-runtime.js" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/react_jsx-runtime.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/react_jsx-runtime.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/react_jsx-runtime.js.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1770157798989</updated>
-      <workItem from="1776434397048" duration="6339000" />
+      <workItem from="1776434397048" duration="6657000" />
     </task>
     <task id="LOCAL-00001" summary="main">
       <option name="closed" value="true" />
@@ -104,7 +84,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770588757872</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="main">
+      <option name="closed" value="true" />
+      <created>1776441747652</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1776441747652</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

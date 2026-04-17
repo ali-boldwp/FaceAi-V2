@@ -1,0 +1,8 @@
+{
+  "name": "faceai-v2",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "npm --prefix faceai run dev"
+  }
+}

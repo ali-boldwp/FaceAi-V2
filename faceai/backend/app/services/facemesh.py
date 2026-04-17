@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Dict, List, Optional, Tuple
+import urllib.request
 
 import cv2
 import mediapipe as mp
@@ -13,6 +15,14 @@ from app.services.measurements import compute_measurements, compute_ratios
 from app.services.overlay import draw_landmarks, draw_all_landmarks
 from app.utils.image_io import read_image, to_base64_png
 from app.utils.landmarks_map import load_landmark_map
+
+PROJECT_ROOT = Path(__file__).resolve().parents[2]
+FACE_LANDMARKER_MODEL_URL = (
+    "https://storage.googleapis.com/mediapipe-models/face_landmarker/"
+    "face_landmarker/float16/latest/face_landmarker.task"
+)
+FACE_LANDMARKER_MODEL_PATH = PROJECT_ROOT / "model_cache" / "mediapipe" / "face_landmarker.task"
+_FACE_LANDMARKER = None
 
 
 @dataclass
@@ -36,14 +46,14 @@ def _select_best_face(landmark_lists: List, image_w: int, image_h: int) -> Optio
     best: Optional[FaceSelection] = None
 
     for face in landmark_lists:
-        bbox = _bbox_from_landmarks(face.landmark)
+        bbox = _bbox_from_landmarks(face)
         min_x, min_y, max_x, max_y = bbox
         area = max(0.0, (max_x - min_x)) * max(0.0, (max_y - min_y))
         center_x = (min_x + max_x) / 2.0
         center_y = (min_y + max_y) / 2.0
         dist = ((center_x - image_center[0]) ** 2 + (center_y - image_center[1]) ** 2) ** 0.5
         score = area - (dist * area * 0.5)
-        selection = FaceSelection(face.landmark, bbox, score)
+        selection = FaceSelection(face, bbox, score)
         if best is None or selection.score > best.score:
             best = selection
 
@@ -52,24 +62,51 @@ def _select_best_face(landmark_lists: List, image_w: int, image_h: int) -> Optio
 
 def _extract_landmarks(image_bgr: np.ndarray) -> Tuple[List, int]:
     rgb = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2RGB)
-    if not hasattr(mp, "solutions"):
-        raise RuntimeError(
-            "MediaPipe 'solutions' module not available. "
-            "Pin mediapipe to a version that includes solutions (e.g. 0.10.11) "
-            "and reinstall backend dependencies."
-        )
-    with mp.solutions.face_mesh.FaceMesh(
-        static_image_mode=True,
-        max_num_faces=5,
-        refine_landmarks=False,
-        min_detection_confidence=0.5,
-    ) as face_mesh:
-        results = face_mesh.process(rgb)
+    if hasattr(mp, "solutions"):
+        with mp.solutions.face_mesh.FaceMesh(
+            static_image_mode=True,
+            max_num_faces=5,
+            refine_landmarks=False,
+            min_detection_confidence=0.5,
+        ) as face_mesh:
+            results = face_mesh.process(rgb)
 
-    if not results.multi_face_landmarks:
+        if not results.multi_face_landmarks:
+            return [], 0
+
+        faces = [face.landmark for face in results.multi_face_landmarks]
+        return faces, len(faces[0])
+
+    landmarker = _get_face_landmarker()
+    image = mp.Image(image_format=mp.ImageFormat.SRGB, data=rgb)
+    results = landmarker.detect(image)
+    if not results.face_landmarks:
         return [], 0
 
-    return results.multi_face_landmarks, len(results.multi_face_landmarks[0].landmark)
+    return results.face_landmarks, len(results.face_landmarks[0])
+
+
+def _get_face_landmarker():
+    global _FACE_LANDMARKER
+
+    if _FACE_LANDMARKER is not None:
+        return _FACE_LANDMARKER
+
+    if not FACE_LANDMARKER_MODEL_PATH.exists():
+        FACE_LANDMARKER_MODEL_PATH.parent.mkdir(parents=True, exist_ok=True)
+        urllib.request.urlretrieve(FACE_LANDMARKER_MODEL_URL, FACE_LANDMARKER_MODEL_PATH)
+
+    from mediapipe.tasks import python
+    from mediapipe.tasks.python import vision
+
+    options = vision.FaceLandmarkerOptions(
+        base_options=python.BaseOptions(model_asset_path=str(FACE_LANDMARKER_MODEL_PATH)),
+        running_mode=vision.RunningMode.IMAGE,
+        num_faces=5,
+        min_face_detection_confidence=0.5,
+    )
+    _FACE_LANDMARKER = vision.FaceLandmarker.create_from_options(options)
+    return _FACE_LANDMARKER
 
 
 def _points_from_map(landmarks: List, mapping: Dict[str, Optional[int]], width: int, height: int) -> Dict[str, Dict]:
@@ -125,6 +162,112 @@ def _tr_from_normalized(tr_x: float, tr_y: float, width: int, height: int) -> Di
     }
 
 
+def _synthetic_point(px: float, py: float, width: int, height: int) -> Dict:
+    px = max(0.0, min(float(width - 1), px))
+    py = max(0.0, min(float(height - 1), py))
+    return {
+        "index": None,
+        "pixel": {"x": px, "y": py},
+        "normalized": {"x": px / width, "y": py / height, "z": 0.0},
+    }
+
+
+def _skin_mask(image_bgr: np.ndarray) -> np.ndarray:
+    ycrcb = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2YCrCb)
+    _, cr, cb = cv2.split(ycrcb)
+    skin = (cr >= 130) & (cr <= 180) & (cb >= 70) & (cb <= 140)
+    not_background = np.any(image_bgr < 245, axis=2)
+    return skin & not_background
+
+
+def _estimate_sa_from_skin(
+    skin: np.ndarray,
+    zy_point: Dict,
+    ex_point: Dict | None,
+    side: str,
+    face_width: float,
+    width: int,
+    height: int,
+) -> Dict | None:
+    zy_x = float(zy_point["pixel"]["x"])
+    zy_y = float(zy_point["pixel"]["y"])
+    ex_y = float(ex_point["pixel"]["y"]) if ex_point else zy_y - (height * 0.10)
+    target_y = ex_y + ((zy_y - ex_y) * 0.18)
+    y_start = max(0, int(target_y - (height * 0.035)))
+    y_end = min(height - 1, int(target_y + (height * 0.07)))
+    inner_gap = max(4, int(face_width * 0.025))
+    outer_width = max(18, int(face_width * 0.32))
+
+    if side == "R":
+        x_start = max(0, int(zy_x - outer_width))
+        x_end = max(0, int(zy_x - inner_gap))
+    else:
+        x_start = min(width - 1, int(zy_x + inner_gap))
+        x_end = min(width - 1, int(zy_x + outer_width))
+
+    if x_end <= x_start or y_end <= y_start:
+        return None
+
+    min_pixels = max(3, int((x_end - x_start) * 0.08))
+    best: tuple[float, int, np.ndarray] | None = None
+    for y in range(y_start, y_end + 1):
+        xs = np.where(skin[y, x_start : x_end + 1])[0]
+        if len(xs) < min_pixels:
+            continue
+
+        distance_penalty = abs(float(y) - target_y) / max(1.0, float(y_end - y_start))
+        score = float(len(xs)) * (1.0 - (distance_penalty * 0.65))
+        if best is None or score > best[0]:
+            best = (score, y, xs + x_start)
+
+    if best is None:
+        return None
+
+    _, y, absolute_xs = best
+    px = float(np.percentile(absolute_xs, 8 if side == "R" else 92))
+    return _synthetic_point(px, float(y), width, height)
+
+
+def _nearest_by_x(points: Dict[str, Dict], names: tuple[str, ...], target_x: float) -> Dict | None:
+    candidates = [points[name] for name in names if name in points]
+    if not candidates:
+        return None
+    return min(candidates, key=lambda point: abs(float(point["pixel"]["x"]) - target_x))
+
+    return None
+
+
+def _add_front_ear_points(points: Dict[str, Dict], image_bgr: np.ndarray, width: int, height: int) -> None:
+    zy_r = points.get("Zy_R")
+    zy_l = points.get("Zy_L")
+    ft_r = points.get("Ft_R")
+    ft_l = points.get("Ft_L")
+    if not zy_r or not zy_l:
+        return
+
+    face_width = abs(zy_l["pixel"]["x"] - zy_r["pixel"]["x"])
+    outward = max(width * 0.045, face_width * 0.18)
+    skin = _skin_mask(image_bgr)
+    ex_r = _nearest_by_x(points, ("Ex_R", "Ex_L"), float(zy_r["pixel"]["x"]))
+    ex_l = _nearest_by_x(points, ("Ex_R", "Ex_L"), float(zy_l["pixel"]["x"]))
+
+    if "Sa_R" not in points:
+        top_ref = ft_r or ft_l or zy_r
+        y = (top_ref["pixel"]["y"] * 0.48) + (zy_r["pixel"]["y"] * 0.52)
+        points["Sa_R"] = (
+            _estimate_sa_from_skin(skin, zy_r, ex_r, "R", face_width, width, height)
+            or _synthetic_point(zy_r["pixel"]["x"] - outward, y, width, height)
+        )
+
+    if "Sa_L" not in points:
+        top_ref = ft_l or ft_r or zy_l
+        y = (top_ref["pixel"]["y"] * 0.48) + (zy_l["pixel"]["y"] * 0.52)
+        points["Sa_L"] = (
+            _estimate_sa_from_skin(skin, zy_l, ex_l, "L", face_width, width, height)
+            or _synthetic_point(zy_l["pixel"]["x"] + outward, y, width, height)
+        )
+
+
 def analyze_images(
     front_bytes: bytes,
     side_bytes: bytes,
@@ -155,6 +298,7 @@ def analyze_images(
     mapping = load_landmark_map()
 
     front_points = _points_from_map(front_selection.landmarks, mapping, front_w, front_h)
+    _add_front_ear_points(front_points, front_image, front_w, front_h)
     side_points = (
         _points_from_map(side_selection.landmarks, mapping, side_w, side_h)
         if side_selection is not None

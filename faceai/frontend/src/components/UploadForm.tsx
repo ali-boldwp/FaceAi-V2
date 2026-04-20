@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { analyzeImages, AnalyzeResponse } from "../api/client";
+import { toaster } from "./Toaster";
 
 type Props = {
   onResult: (result: AnalyzeResponse) => void;
@@ -25,7 +26,11 @@ export function UploadForm({ onResult, onError, onFilesChange, onGenderChange }:
     onError("");
 
     try {
-      const result = await analyzeImages(frontFile, sideFile, undefined, gender);
+      const result = await toaster.promise(analyzeImages(frontFile, sideFile, undefined, gender), {
+        loading: "Images analyze ho rahi hain...",
+        success: "Landmarks ready hain.",
+        error: (error) => (error instanceof Error ? error.message : "Analysis failed."),
+      });
       onResult(result);
     } catch (error) {
       const message = error instanceof Error ? error.message : "Unexpected error";

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { AnalyzeResponse } from "../api/client";
 import { UploadForm } from "../components/UploadForm";
 import { ResultsPanel } from "../components/ResultsPanel";
+import { toaster } from "../components/Toaster";
 
 export function Home() {
   const [result, setResult] = useState<AnalyzeResponse | null>(null);
@@ -20,7 +21,11 @@ export function Home() {
     setError("");
     try {
       const { analyzeImages } = await import("../api/client");
-      const updated = await analyzeImages(frontFile, sideFile, undefined, gender);
+      const updated = await toaster.promise(analyzeImages(frontFile, sideFile, undefined, gender), {
+        loading: "Images recalculate ho rahi hain...",
+        success: "Updated landmarks ready hain.",
+        error: (err) => (err instanceof Error ? err.message : "Failed to recalculate images."),
+      });
       setResult(updated);
     } catch (err) {
       const message = err instanceof Error ? err.message : "Failed to recalculate images.";
@@ -74,7 +79,11 @@ export function Home() {
               }
               try {
                 const { analyzeImages } = await import("../api/client");
-                const updated = await analyzeImages(frontFile, sideFile, tr, gender);
+                const updated = await toaster.promise(analyzeImages(frontFile, sideFile, tr, gender), {
+                  loading: "Manual Tr apply ho raha hai...",
+                  success: "Manual Tr apply ho gaya.",
+                  error: (err) => (err instanceof Error ? err.message : "Failed to apply manual Tr."),
+                });
                 setResult(updated);
               } catch (err) {
                 const message = err instanceof Error ? err.message : "Failed to apply manual Tr.";

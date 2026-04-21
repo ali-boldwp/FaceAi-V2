@@ -1,10 +1,8 @@
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 const INVALID_SIDE_IMAGE_MESSAGE =
-  "Imaginea laterală nu a fost detectată corect. Te rugăm să încarci o fotografie la 45-60 de grade, cu nasul, un ochi, urechea, linia maxilarului și bărbia vizibile clar.";
+  "Imaginea laterală nu a fost detectată corect. Te rugăm să încarci un profil lateral real de 90 de grade, cu un singur ochi, urechea completă, vârful nasului, linia maxilarului, bărbia și fruntea clar vizibile.";
 
 export class SideImageDetectionError extends Error {
-  imageSrc = "/side-reference.png";
-
   constructor() {
     super(INVALID_SIDE_IMAGE_MESSAGE);
     this.name = "SideImageDetectionError";
@@ -77,9 +75,13 @@ export async function analyzeImages(
   }
 
   const data = (await res.json()) as AnalyzeResponse;
-  const sideMissing = data.warnings.some((warning) =>
-    warning.toLowerCase().includes("no face detected in side image")
-  );
+  const sideMissing = data.warnings.some((warning) => {
+    const lower = warning.toLowerCase();
+    return (
+      lower.includes("no face detected in side image") ||
+      lower.includes("side image is not a true 90-degree profile")
+    );
+  });
   if (sideMissing) {
     throw new SideImageDetectionError();
   }

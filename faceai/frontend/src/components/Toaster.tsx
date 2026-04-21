@@ -7,7 +7,6 @@ type Toast = {
   id: number;
   type: ToastType;
   message: string;
-  imageSrc?: string;
 };
 
 type PromiseMessages<T> = {
@@ -35,14 +34,6 @@ function resolveMessage<T>(message: string | ((value: T) => string), value: T) {
   return typeof message === "function" ? message(value) : message;
 }
 
-function getToastImage(error: unknown) {
-  if (error && typeof error === "object" && "imageSrc" in error) {
-    const imageSrc = (error as { imageSrc?: unknown }).imageSrc;
-    return typeof imageSrc === "string" ? imageSrc : undefined;
-  }
-  return undefined;
-}
-
 export const toaster = {
   promise<T>(promise: Promise<T>, messages: PromiseMessages<T>): Promise<T> {
     const id = nextId++;
@@ -59,7 +50,6 @@ export const toaster = {
           id,
           type: "error",
           message: resolveMessage(messages.error, error),
-          imageSrc: getToastImage(error),
         });
         window.setTimeout(() => removeToast(id), 7000);
         throw error;
@@ -82,7 +72,6 @@ export function Toaster() {
       {toasts.map((toast) => (
         <div className={`toast toast-${toast.type}`} key={toast.id}>
           <p>{toast.message}</p>
-          {toast.imageSrc && <img src={toast.imageSrc} alt="Exemplu de imagine laterală validă" />}
         </div>
       ))}
     </div>

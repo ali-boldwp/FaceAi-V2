@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.1.0",
   "scripts": {
-    "dev": "npm --prefix faceai run dev"
+    "dev": "powershell.exe -ExecutionPolicy Bypass -File faceai/scripts/dev.ps1",
+    "postinstall": "npm --prefix faceai install"
   }
 }

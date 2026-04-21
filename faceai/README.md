@@ -22,35 +22,6 @@ npm run dev
 ```
 This runs the Vite dev server and the FastAPI backend with hot reload.
 
-From the repo root, `npm install` now installs the nested Node dependencies for `faceai/` and `faceai/frontend/`, so
-`npm run dev` works from either the repo root or the `faceai/` directory. On Windows, the dev command uses the bundled
-PowerShell launcher script to start both frontend and backend together.
-
-### Python setup
-Create a backend virtual environment and install the Python requirements before starting dev mode:
-
-Windows (PowerShell or CMD):
-```bash
-py -3 -m venv faceai/backend/.venv
-faceai/backend/.venv/Scripts/python -m pip install -r faceai/backend/requirements.txt
-```
-
-macOS / Linux:
-```bash
-python3 -m venv faceai/backend/.venv
-faceai/backend/.venv/bin/python -m pip install -r faceai/backend/requirements.txt
-```
-
-The dev runner automatically looks for Python in `faceai/backend/.venv` first. If you want to use a different Python
-executable, set `FACEAI_PYTHON` to that executable path before running `npm run dev`.
-
-### PowerShell note on Windows
-If PowerShell shows `running scripts is disabled` when you type `npm`, use `npm.cmd run dev` or enable local npm
-scripts once with:
-```powershell
-Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
-```
-
 If you see an error about `mediapipe` missing `solutions`, reinstall backend deps to the pinned version:
 ```bash
 pip install -r backend/requirements.txt

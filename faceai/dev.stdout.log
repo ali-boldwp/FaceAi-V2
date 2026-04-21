@@ -1,0 +1,69 @@
+
+> faceai-v2@0.1.0 dev
+> npm --prefix faceai run dev
+
+
+> faceai@0.1.0 dev
+> concurrently "npm --prefix frontend run dev" "python -m uvicorn app.main:app --reload --reload-exclude model_cache --reload-exclude backend/model_cache --host 0.0.0.0 --port 8000 --app-dir backend"
+
+[0] 
+[0] > faceai-frontend@0.1.0 dev
+[0] > vite
+[0] 
+[1] INFO:     Will watch for changes in these directories: ['C:\\Users\\dell\\WebstormProjects\\FaceAi-V2\\faceai']
+[1] INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+[1] INFO:     Started reloader process [20732] using WatchFiles
+[0] 
+[0]   [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m473[22m[2m[0m ms[22m
+[0] 
+[0]   [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[0]   [32m➜[39m  [1mNetwork[22m: [36mhttp://192.168.1.17:[1m5173[22m/[39m
+[1] INFO:     Started server process [19088]
+[1] INFO:     Waiting for application startup.
+[1] INFO:     Application startup complete.
+[1] INFO:     127.0.0.1:62506 - "GET /api/health HTTP/1.1" 200 OK
+[1] W0000 00:00:1776763576.686635   12668 face_landmarker_graph.cc:180] Sets FaceBlendshapesGraph acceleration to xnnpack by default.
+[1] INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+[1] W0000 00:00:1776763576.694442   17104 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+[1] W0000 00:00:1776763576.711827    9612 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+[1] INFO:     127.0.0.1:65289 - "POST /api/analyze HTTP/1.1" 200 OK
+[1] INFO:     127.0.0.1:60945 - "POST /api/analyze HTTP/1.1" 200 OK
+[1] INFO:     127.0.0.1:54855 - "POST /api/analyze HTTP/1.1" 200 OK
+[1] INFO:     127.0.0.1:57809 - "POST /api/analyze HTTP/1.1" 200 OK
+[1] WARNING:  WatchFiles detected changes in 'backend\app\services\facemesh.py'. Reloading...
+[1]  [2m2:40:13 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx, /src/components/UploadForm.tsx[22m
+[0] [2m2:40:13 PM[22m [31m[1m[vite][22m[39m Pre-transform error: Transform failed with 1 error:
+[0] C:/Users/dell/WebstormProjects/FaceAi-V2/faceai/frontend/src/api/client.ts:86:2: ERROR: Unexpected ")"
+[0] [2m2:40:13 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Transform failed with 1 error:
+[0] C:/Users/dell/WebstormProjects/FaceAi-V2/faceai/frontend/src/api/client.ts:86:2: ERROR: Unexpected ")"[39m
+[0]   Plugin: [35mvite:esbuild[39m
+[0]   File: [36mC:/Users/dell/WebstormProjects/FaceAi-V2/faceai/frontend/src/api/client.ts[39m:86:2
+[0] [33m  
+[0]   [33mUnexpected ")"[33m
+[0]   84 |        lower.includes("side image is not a true 90-degree profile")
+[0]   85 |      );
+[0]   86 |    );
+[0]      |    ^
+[0]   87 |    if (sideMissing) {
+[0]   88 |      throw new SideImageDetectionError();
+[0]   [39m
+[0]       at failureErrorWithLog (C:\Users\dell\WebstormProjects\FaceAi-V2\faceai\frontend\node_modules\esbuild\lib\main.js:1472:15)
+[0]       at C:\Users\dell\WebstormProjects\FaceAi-V2\faceai\frontend\node_modules\esbuild\lib\main.js:755:50
+[0]       at responseCallbacks.<computed> (C:\Users\dell\WebstormProjects\FaceAi-V2\faceai\frontend\node_modules\esbuild\lib\main.js:622:9)
+[0]       at handleIncomingPacket (C:\Users\dell\WebstormProjects\FaceAi-V2\faceai\frontend\node_modules\esbuild\lib\main.js:677:12)
+[0]       at Socket.readFromStdout (C:\Users\dell\WebstormProjects\FaceAi-V2\faceai\frontend\node_modules\esbuild\lib\main.js:600:7)
+[0]       at Socket.emit (node:events:508:28)
+[0]       at addChunk (node:internal/streams/readable:563:12)
+[0]       at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+[0]       at Readable.push (node:internal/streams/readable:394:5)
+[0]       at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+[0] [2m2:41:09 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/pages/Home.tsx, /src/components/UploadForm.tsx[22m
+[1] INFO:     127.0.0.1:58182 - "POST /api/analyze HTTP/1.1" 200 OK
+[1] INFO:     127.0.0.1:60590 - "POST /api/analyze HTTP/1.1" 200 OK
+[1] INFO:     Shutting down
+[0] Terminate batch job (Y/N)? Terminate batch job (Y/N)? 
+INFO:     Waiting for application shutdown.
+[1] INFO:     Application shutdown complete.
+[1] INFO:     Finished server process [19088]
+[0] npm --prefix frontend run dev exited with code 1
+[1] python -m uvicorn app.main:app --reload --reload-exclude model_cache --reload-exclude backend/model_cache --host 0.0.0.0 --port 8000 --app-dir backend exited with code 1

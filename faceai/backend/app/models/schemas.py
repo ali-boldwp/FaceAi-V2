@@ -37,9 +37,12 @@ class MeasurementOut(BaseModel):
 
 class RatioOut(BaseModel):
     id: str
+    label: Optional[str] = None
     numerator: str
     denominator: str
     value: Optional[float]
+    ideal_value: Optional[float] = None
+    deviation_pct: Optional[float] = None
     note: Optional[str]
 
 

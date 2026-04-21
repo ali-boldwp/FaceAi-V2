@@ -30,9 +30,12 @@ export type AnalyzeResponse = {
   }>;
   ratios: Array<{
     id: string;
+    label?: string | null;
     numerator: string;
     denominator: string;
     value: number | null;
+    ideal_value?: number | null;
+    deviation_pct?: number | null;
     note?: string | null;
   }>;
   annotated_images: {

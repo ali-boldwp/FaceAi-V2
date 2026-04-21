@@ -149,6 +149,20 @@ def _points_from_map(landmarks: List, mapping: Dict[str, Optional[int]], width: 
             "normalized": {"x": nx, "y": ny, "z": nz},
         }
 
+    if "Pi_R" not in points and "Ps_R" in points and "Ir_R" in points:
+        upper = points["Ps_R"]
+        iris = points["Ir_R"]
+        px = upper["pixel"]["x"]
+        py = (2.0 * iris["pixel"]["y"]) - upper["pixel"]["y"]
+        nx = upper["normalized"]["x"]
+        ny = (2.0 * iris["normalized"]["y"]) - upper["normalized"]["y"]
+        nz = upper["normalized"]["z"]
+        points["Pi_R"] = {
+            "index": None,
+            "pixel": {"x": px, "y": py},
+            "normalized": {"x": nx, "y": ny, "z": nz},
+        }
+
     return points
 
 
@@ -228,6 +242,70 @@ def _estimate_sa_from_skin(
     return _synthetic_point(px, float(y), width, height)
 
 
+def _estimate_front_ear_band_points(
+    skin: np.ndarray,
+    zy_point: Dict,
+    sa_point: Dict,
+    side: str,
+    face_width: float,
+    width: int,
+    height: int,
+) -> Dict[str, Dict] | None:
+    zy_x = float(zy_point["pixel"]["x"])
+    zy_y = float(zy_point["pixel"]["y"])
+    sa_y = float(sa_point["pixel"]["y"])
+
+    y_start = max(0, int(min(sa_y, zy_y - (face_width * 0.04))))
+    y_end = min(height - 1, int(zy_y + (face_width * 0.30)))
+    inner_gap = max(4, int(face_width * 0.015))
+    outer_width = max(24, int(face_width * 0.30))
+
+    if side == "R":
+        x_start = max(0, int(zy_x - outer_width))
+        x_end = max(0, int(zy_x - inner_gap))
+    else:
+        x_start = min(width - 1, int(zy_x + inner_gap))
+        x_end = min(width - 1, int(zy_x + outer_width))
+
+    if x_end <= x_start or y_end <= y_start:
+        return None
+
+    rows: list[tuple[int, float, float]] = []
+    min_pixels = max(4, int((x_end - x_start) * 0.10))
+    for y in range(y_start, y_end + 1):
+        xs = np.where(skin[y, x_start : x_end + 1])[0]
+        if len(xs) < min_pixels:
+            continue
+        absolute_xs = xs + x_start
+        outer_x = float(np.percentile(absolute_xs, 8 if side == "R" else 92))
+        inner_x = float(np.percentile(absolute_xs, 92 if side == "R" else 8))
+        rows.append((y, outer_x, inner_x))
+
+    if len(rows) < 3:
+        return None
+
+    pa_row = min(rows, key=lambda row: row[1]) if side == "R" else max(rows, key=lambda row: row[1])
+    sba_row = max(rows, key=lambda row: row[0])
+    center_rows = [
+        row
+        for row in rows
+        if (y_start + ((y_end - y_start) * 0.30)) <= row[0] <= (y_start + ((y_end - y_start) * 0.72))
+    ]
+    if not center_rows:
+        center_rows = rows
+
+    pra_x = float(np.mean([row[2] for row in center_rows]))
+    pra_y = float(np.mean([row[0] for row in center_rows]))
+    sba_x = float((sba_row[1] + sba_row[2]) / 2.0)
+    sba_y = float(sba_row[0])
+
+    return {
+        "Pa": _synthetic_point(float(pa_row[1]), float(pa_row[0]), width, height),
+        "Pra": _synthetic_point(pra_x, pra_y, width, height),
+        "Sba": _synthetic_point(sba_x, sba_y, width, height),
+    }
+
+
 def _nearest_by_x(points: Dict[str, Dict], names: tuple[str, ...], target_x: float) -> Dict | None:
     candidates = [points[name] for name in names if name in points]
     if not candidates:
@@ -264,6 +342,79 @@ def _add_front_ear_points(points: Dict[str, Dict], image_bgr: np.ndarray, width:
             _estimate_sa_from_skin(skin, zy_l, ex_l, "L", face_width, width, height)
             or _synthetic_point(zy_l["pixel"]["x"] + outward, y, width, height)
         )
+
+    ear_r = _estimate_front_ear_band_points(skin, zy_r, points["Sa_R"], "R", face_width, width, height)
+    ear_l = _estimate_front_ear_band_points(skin, zy_l, points["Sa_L"], "L", face_width, width, height)
+
+    if ear_r:
+        points.setdefault("Sba_R", ear_r["Sba"])
+        points.setdefault("Pa_R", ear_r["Pa"])
+        points.setdefault("Pra_R", ear_r["Pra"])
+        points.setdefault("T_R", ear_r["Pra"])
+    else:
+        points.setdefault(
+            "Sba_R",
+            _synthetic_point(
+                points["Sa_R"]["pixel"]["x"],
+                points["Sa_R"]["pixel"]["y"] + max(height * 0.08, face_width * 0.18),
+                width,
+                height,
+            ),
+        )
+        points.setdefault(
+            "Pa_R",
+            _synthetic_point(
+                points["Sa_R"]["pixel"]["x"] - max(width * 0.01, face_width * 0.02),
+                (points["Sa_R"]["pixel"]["y"] + points["Sba_R"]["pixel"]["y"]) / 2.0,
+                width,
+                height,
+            ),
+        )
+        points.setdefault(
+            "Pra_R",
+            _synthetic_point(
+                points["Pa_R"]["pixel"]["x"] + max(width * 0.03, face_width * 0.07),
+                points["Pa_R"]["pixel"]["y"],
+                width,
+                height,
+            ),
+        )
+        points.setdefault("T_R", points["Pra_R"])
+
+    if ear_l:
+        points.setdefault("Sba_L", ear_l["Sba"])
+        points.setdefault("Pa_L", ear_l["Pa"])
+        points.setdefault("Pra_L", ear_l["Pra"])
+        points.setdefault("T_L", ear_l["Pra"])
+    else:
+        points.setdefault(
+            "Sba_L",
+            _synthetic_point(
+                points["Sa_L"]["pixel"]["x"],
+                points["Sa_L"]["pixel"]["y"] + max(height * 0.08, face_width * 0.18),
+                width,
+                height,
+            ),
+        )
+        points.setdefault(
+            "Pa_L",
+            _synthetic_point(
+                points["Sa_L"]["pixel"]["x"] + max(width * 0.01, face_width * 0.02),
+                (points["Sa_L"]["pixel"]["y"] + points["Sba_L"]["pixel"]["y"]) / 2.0,
+                width,
+                height,
+            ),
+        )
+        points.setdefault(
+            "Pra_L",
+            _synthetic_point(
+                points["Pa_L"]["pixel"]["x"] - max(width * 0.03, face_width * 0.07),
+                points["Pa_L"]["pixel"]["y"],
+                width,
+                height,
+            ),
+        )
+        points.setdefault("T_L", points["Pra_L"])
 
 
 def _subject_mask(image_bgr: np.ndarray) -> np.ndarray:
@@ -526,7 +677,7 @@ def analyze_images(
             mandatory_landmarks.append(LandmarkOut(label=label, index=index, pixel=None, normalized=None))
 
     measurements: List[MeasurementOut] = compute_measurements(front_points, side_points)
-    ratios: List[RatioOut] = compute_ratios(measurements)
+    ratios: List[RatioOut] = compute_ratios(measurements, gender=gender)
 
     annotated_front = draw_landmarks(front_image.copy(), front_points)
     annotated_side = draw_landmarks(side_image.copy(), side_points) if side_points else side_image.copy()

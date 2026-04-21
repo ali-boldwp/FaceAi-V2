@@ -1,4 +1,21 @@
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+function resolveApiUrl() {
+  const configuredUrl = import.meta.env.VITE_API_URL?.trim();
+  if (configuredUrl) {
+    return configuredUrl.replace(/\/$/, "");
+  }
+
+  if (import.meta.env.DEV) {
+    return "";
+  }
+
+  if (typeof window !== "undefined") {
+    return `${window.location.protocol}//${window.location.hostname}:8000`;
+  }
+
+  return "http://localhost:8000";
+}
+
+const API_URL = resolveApiUrl();
 const INVALID_SIDE_IMAGE_MESSAGE =
   "Imaginea laterală nu a fost detectată corect. Te rugăm să încarci un profil lateral real de 90 de grade, cu un singur ochi, urechea completă, vârful nasului, linia maxilarului, bărbia și fruntea clar vizibile.";
 

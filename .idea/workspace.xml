@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3b76b11-5697-4110-b5b7-ca8958ad6822" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/backend/app/services/facemesh.py" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/backend/app/services/facemesh.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/_metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/src/api/client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/src/api/client.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/vite.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceai/frontend/dist/assets/index-DgAPq8Kl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceai/frontend/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/dist/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceai/frontend/src/components/UploadForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/src/components/UploadForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceai/frontend/src/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/src/pages/Home.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

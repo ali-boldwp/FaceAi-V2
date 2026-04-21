@@ -10,18 +10,11 @@ import mediapipe as mp
 import numpy as np
 
 from app.models.schemas import AnalyzeResponse, LandmarkOut, MeasurementOut, RatioOut
+from app.services.hairline import estimate_trichion
 from app.services.measurements import compute_measurements, compute_ratios
 from app.services.overlay import draw_landmarks, draw_all_landmarks
 from app.utils.image_io import read_image, to_base64_png
 from app.utils.landmarks_map import load_landmark_map
-
-try:
-    from app.services.hairline import estimate_trichion
-
-    _HAIRLINE_IMPORT_ERROR: Exception | None = None
-except Exception as exc:  # noqa: BLE001
-    estimate_trichion = None
-    _HAIRLINE_IMPORT_ERROR = exc
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 FACE_LANDMARKER_MODEL_URL = (
@@ -509,12 +502,9 @@ def analyze_images(
         trichion = _tr_from_normalized(tr_x, tr_y, front_w, front_h)
         tr_method = "manual"
     else:
-        if estimate_trichion is not None:
-            trichion, tr_debug, tr_method = estimate_trichion(
-                front_image, front_points, landmarks=front_selection.landmarks, debug=True
-            )
-        else:
-            tr_method = "none"
+        trichion, tr_debug, tr_method = estimate_trichion(
+            front_image, front_points, landmarks=front_selection.landmarks, debug=True
+        )
     trichion_available = trichion is not None
     if trichion:
         front_points["Tr_R"] = trichion
@@ -558,8 +548,6 @@ def analyze_images(
         warnings.append("Side landmarks estimated using profile fallback.")
     if not trichion_available:
         warnings.append("Trichion (Tr) unavailable; hairline segmentation did not return a result.")
-        if _HAIRLINE_IMPORT_ERROR is not None:
-            warnings.append("Hairline model dependencies are unavailable, so Tr-based measurements may be null.")
     elif tr_method == "fallback":
         warnings.append("Trichion (Tr) estimated with geometric fallback (no hair detected).")
     elif tr_method == "manual":

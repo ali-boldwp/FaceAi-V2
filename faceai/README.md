@@ -20,17 +20,7 @@ docker compose up --build
 npm install
 npm run dev
 ```
-This runs the Vite dev server and the FastAPI backend together from one command.
-
-Run those commands from the repo root. The root install now also installs `faceai/` and `faceai/frontend/`
-dependencies, and `npm run dev` starts both frontend and backend together.
-
-### Windows backend setup
-Create the backend virtual environment once before the first dev run:
-```bash
-python -m venv faceai/backend/.venv
-faceai/backend/.venv/Scripts/python -m pip install -r faceai/backend/requirements.txt
-```
+This runs the Vite dev server and the FastAPI backend with hot reload.
 
 If you see an error about `mediapipe` missing `solutions`, reinstall backend deps to the pinned version:
 ```bash

@@ -3,7 +3,6 @@
   "private": true,
   "version": "0.1.0",
   "scripts": {
-    "dev": "npm --prefix faceai run dev",
-    "postinstall": "npm --prefix faceai install"
+    "dev": "npm --prefix faceai run dev"
   }
 }

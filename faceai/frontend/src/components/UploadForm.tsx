@@ -27,8 +27,8 @@ export function UploadForm({ onResult, onError, onFilesChange, onGenderChange }:
 
     try {
       const result = await toaster.promise(analyzeImages(frontFile, sideFile, undefined, gender), {
-        loading: "Images analyze ho rahi hain...",
-        success: "Landmarks ready hain.",
+        loading: "Imaginile sunt analizate...",
+        success: "Landmark-urile sunt gata.",
         error: (error) => (error instanceof Error ? error.message : "Analysis failed."),
       });
       onResult(result);

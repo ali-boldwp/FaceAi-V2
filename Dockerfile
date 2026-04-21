@@ -15,7 +15,7 @@ FROM python:3.11-slim AS app
 WORKDIR /app
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends libgl1 libglib2.0-0 nginx supervisor \
+    && apt-get install -y --no-install-recommends libgl1 libglib2.0-0 libgles2 nginx supervisor \
     && rm -rf /var/lib/apt/lists/*
 
 COPY faceai/backend/requirements.txt /app/backend/requirements.txt

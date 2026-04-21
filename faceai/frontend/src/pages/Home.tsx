@@ -22,8 +22,8 @@ export function Home() {
     try {
       const { analyzeImages } = await import("../api/client");
       const updated = await toaster.promise(analyzeImages(frontFile, sideFile, undefined, gender), {
-        loading: "Images recalculate ho rahi hain...",
-        success: "Updated landmarks ready hain.",
+        loading: "Imaginile sunt recalculate...",
+        success: "Landmark-urile actualizate sunt gata.",
         error: (err) => (err instanceof Error ? err.message : "Failed to recalculate images."),
       });
       setResult(updated);
@@ -80,8 +80,8 @@ export function Home() {
               try {
                 const { analyzeImages } = await import("../api/client");
                 const updated = await toaster.promise(analyzeImages(frontFile, sideFile, tr, gender), {
-                  loading: "Manual Tr apply ho raha hai...",
-                  success: "Manual Tr apply ho gaya.",
+                  loading: "Tr manual este aplicat...",
+                  success: "Tr manual a fost aplicat.",
                   error: (err) => (err instanceof Error ? err.message : "Failed to apply manual Tr."),
                 });
                 setResult(updated);

@@ -7,10 +7,10 @@
     <list default="true" id="b3b76b11-5697-4110-b5b7-ca8958ad6822" name="Changes" comment="main">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceai/backend/app/services/facemesh.py" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/backend/app/services/facemesh.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceai/backend/app/utils/landmarks_map.json" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/backend/app/utils/landmarks_map.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/faceai/frontend/src/api/client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/src/api/client.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/src/components/UploadForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/src/components/UploadForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/src/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/src/pages/Home.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceai/frontend/src/components/Toaster.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/src/components/Toaster.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/faceai/frontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +55,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\dell\\WebstormProjects\\FaceAi-V2\\faceai\\frontend\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -73,7 +74,8 @@
       <option name="presentableId" value="Default" />
       <updated>1770157798989</updated>
       <workItem from="1776434397048" duration="6770000" />
-      <workItem from="1776689992446" duration="1926000" />
+      <workItem from="1776689992446" duration="2567000" />
+      <workItem from="1776762168986" duration="2162000" />
     </task>
     <task id="LOCAL-00001" summary="main">
       <option name="closed" value="true" />
@@ -115,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1776690015817</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="main">
+      <option name="closed" value="true" />
+      <created>1776699180056</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1776699180056</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

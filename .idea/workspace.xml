@@ -7,11 +7,7 @@
     <list default="true" id="b3b76b11-5697-4110-b5b7-ca8958ad6822" name="Changes" comment="main">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/backend/app/services/facemesh.py" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/backend/app/services/facemesh.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/backend/app/utils/landmarks_map.json" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/backend/app/utils/landmarks_map.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/src/api/client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/src/api/client.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/src/components/Toaster.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/src/components/Toaster.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai/frontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +15,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="SideImage" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{

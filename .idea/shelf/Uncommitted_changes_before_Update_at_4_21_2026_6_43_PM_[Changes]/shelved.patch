@@ -1,0 +1,118 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"b3b76b11-5697-4110-b5b7-ca8958ad6822\" name=\"Changes\" comment=\"Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/faceai/frontend/dist/assets/index-DgAPq8Kl.js\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/faceai/frontend/dist/index.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/faceai/frontend/dist/index.html\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/faceai/frontend/src/components/UploadForm.tsx\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/faceai/frontend/src/components/UploadForm.tsx\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/faceai/frontend/src/pages/Home.tsx\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/faceai/frontend/src/pages/Home.tsx\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"SideImage\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;ali-boldwp&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/ali-boldwp/FaceAi-V2.git&quot;,\r\n    &quot;accountId&quot;: &quot;63ef7c86-0585-4de1-9f2b-0ab7b51d1c02&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 5\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"39B7q2w4cTLHGBp2gk2qLF1QV5S\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;ts.external.directory.path&quot;: &quot;C:\\\\Users\\\\dell\\\\WebstormProjects\\\\FaceAi-V2\\\\faceai\\\\frontend\\\\node_modules\\\\typescript\\\\lib&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.31033.133\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"b3b76b11-5697-4110-b5b7-ca8958ad6822\" name=\"Changes\" comment=\"\" />\r\n      <created>1770157798989</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1770157798989</updated>\r\n      <workItem from=\"1776434397048\" duration=\"6770000\" />\r\n      <workItem from=\"1776689992446\" duration=\"2567000\" />\r\n      <workItem from=\"1776762168986\" duration=\"2162000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"main\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1770588531270</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1770588531270</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"main\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1770588757872</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1770588757872</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"main\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1776441747652</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1776441747652</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"main\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1776441765583</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1776441765583</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"main\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1776690015817</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1776690015817</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"main\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1776699180056</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1776699180056</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"main\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1776766224293</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1776766224293</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1776767526928</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1776767526928</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1776767531474</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1776767531474</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1776767533046</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1776767533046</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1776767534005</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1776767534005</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1776767556933</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1776767556933</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"13\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"main\" />\r\n    <MESSAGE value=\"Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 32db155619951bd56739e2e229391486d6974d1c)
++++ b/.idea/workspace.xml	(date 1776776554181)
+@@ -4,12 +4,9 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="b3b76b11-5697-4110-b5b7-ca8958ad6822" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
++    <list default="true" id="b3b76b11-5697-4110-b5b7-ca8958ad6822" name="Changes" comment="main">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/faceai/frontend/dist/assets/index-DgAPq8Kl.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/faceai/frontend/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/dist/index.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/faceai/frontend/src/components/UploadForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/src/components/UploadForm.tsx" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/faceai/frontend/src/pages/Home.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/src/pages/Home.tsx" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/faceai/frontend/node_modules/.vite/deps/_metadata.json" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -58,7 +55,7 @@
+     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\dell\\WebstormProjects\\FaceAi-V2\\faceai\\frontend\\node_modules\\typescript\\lib&quot;,
++    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\World\\WebstormProjects\\FaceAi-V2\\faceai\\frontend\\node_modules\\typescript\\lib&quot;,
+     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+ }</component>
+@@ -176,15 +173,23 @@
+       <option name="project" value="LOCAL" />
+       <updated>1776767556933</updated>
+     </task>
+-    <option name="localTasksCounter" value="13" />
++    <task id="LOCAL-00013" summary="main">
++      <option name="closed" value="true" />
++      <created>1776772319814</created>
++      <option name="number" value="00013" />
++      <option name="presentableId" value="LOCAL-00013" />
++      <option name="project" value="LOCAL" />
++      <updated>1776772319814</updated>
++    </task>
++    <option name="localTasksCounter" value="14" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
+   </component>
+   <component name="VcsManagerConfiguration">
+-    <MESSAGE value="main" />
+     <MESSAGE value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
++    <MESSAGE value="main" />
++    <option name="LAST_COMMIT_MESSAGE" value="main" />
+   </component>
+ </project>
+\ No newline at end of file
+Index: faceai/frontend/node_modules/.vite/deps/_metadata.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"hash\": \"ce9c88ac\",\r\n  \"configHash\": \"6b0d730c\",\r\n  \"lockfileHash\": \"664fa149\",\r\n  \"browserHash\": \"6b2604c0\",\r\n  \"optimized\": {\r\n    \"react\": {\r\n      \"src\": \"../../react/index.js\",\r\n      \"file\": \"react.js\",\r\n      \"fileHash\": \"30d10ee9\",\r\n      \"needsInterop\": true\r\n    },\r\n    \"react-dom\": {\r\n      \"src\": \"../../react-dom/index.js\",\r\n      \"file\": \"react-dom.js\",\r\n      \"fileHash\": \"7c1680e4\",\r\n      \"needsInterop\": true\r\n    },\r\n    \"react/jsx-dev-runtime\": {\r\n      \"src\": \"../../react/jsx-dev-runtime.js\",\r\n      \"file\": \"react_jsx-dev-runtime.js\",\r\n      \"fileHash\": \"ac1df92d\",\r\n      \"needsInterop\": true\r\n    },\r\n    \"react/jsx-runtime\": {\r\n      \"src\": \"../../react/jsx-runtime.js\",\r\n      \"file\": \"react_jsx-runtime.js\",\r\n      \"fileHash\": \"ab976db4\",\r\n      \"needsInterop\": true\r\n    },\r\n    \"react-dom/client\": {\r\n      \"src\": \"../../react-dom/client.js\",\r\n      \"file\": \"react-dom_client.js\",\r\n      \"fileHash\": \"1622572d\",\r\n      \"needsInterop\": true\r\n    }\r\n  },\r\n  \"chunks\": {\r\n    \"chunk-QYO66MSY\": {\r\n      \"file\": \"chunk-QYO66MSY.js\"\r\n    },\r\n    \"chunk-RGKZDYLU\": {\r\n      \"file\": \"chunk-RGKZDYLU.js\"\r\n    }\r\n  }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/faceai/frontend/node_modules/.vite/deps/_metadata.json b/faceai/frontend/node_modules/.vite/deps/_metadata.json
+--- a/faceai/frontend/node_modules/.vite/deps/_metadata.json	(revision 32db155619951bd56739e2e229391486d6974d1c)
++++ b/faceai/frontend/node_modules/.vite/deps/_metadata.json	(date 1776776314760)
+@@ -1,37 +1,37 @@
+ {
+-  "hash": "ce9c88ac",
+-  "configHash": "6b0d730c",
++  "hash": "619cdac0",
++  "configHash": "677b6b20",
+   "lockfileHash": "664fa149",
+-  "browserHash": "6b2604c0",
++  "browserHash": "c20a877b",
+   "optimized": {
+     "react": {
+       "src": "../../react/index.js",
+       "file": "react.js",
+-      "fileHash": "30d10ee9",
++      "fileHash": "60c77548",
+       "needsInterop": true
+     },
+     "react-dom": {
+       "src": "../../react-dom/index.js",
+       "file": "react-dom.js",
+-      "fileHash": "7c1680e4",
++      "fileHash": "baad1755",
+       "needsInterop": true
+     },
+     "react/jsx-dev-runtime": {
+       "src": "../../react/jsx-dev-runtime.js",
+       "file": "react_jsx-dev-runtime.js",
+-      "fileHash": "ac1df92d",
++      "fileHash": "5eba163e",
+       "needsInterop": true
+     },
+     "react/jsx-runtime": {
+       "src": "../../react/jsx-runtime.js",
+       "file": "react_jsx-runtime.js",
+-      "fileHash": "ab976db4",
++      "fileHash": "194f5fe0",
+       "needsInterop": true
+     },
+     "react-dom/client": {
+       "src": "../../react-dom/client.js",
+       "file": "react-dom_client.js",
+-      "fileHash": "1622572d",
++      "fileHash": "a744b3c8",
+       "needsInterop": true
+     }
+   },

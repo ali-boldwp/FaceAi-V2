@@ -1,0 +1,74 @@
+Index: .idea/shelf/Uncommitted_changes_before_Update_at_4_21_2026_3_31_PM__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Update_at_4_21_2026_3_31_PM__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Update_at_4_21_2026_3_31_PM__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Update_at_4_21_2026_3_31_PM__Changes_.xml	(revision 153df139c1a48e2cd3eb233c5b12e6a9956f8c1c)
++++ /dev/null	(revision 153df139c1a48e2cd3eb233c5b12e6a9956f8c1c)
+@@ -1,4 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Update_at_4_21_2026_3_31_PM_[Changes]" date="1776767496063" recycled="false" toDelete="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_21_2026_3_31_PM_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Update at 4/21/2026 3:31 PM [Changes]" />
+-</changelist>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"b3b76b11-5697-4110-b5b7-ca8958ad6822\" name=\"Changes\" comment=\"Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"SideImage\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;ali-boldwp&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/ali-boldwp/FaceAi-V2.git&quot;,\r\n    &quot;accountId&quot;: &quot;63ef7c86-0585-4de1-9f2b-0ab7b51d1c02&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;associatedIndex&quot;: 5\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"39B7q2w4cTLHGBp2gk2qLF1QV5S\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,\r\n    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;master&quot;,\r\n    &quot;javascript.preferred.runtime.type.id&quot;: &quot;node&quot;,\r\n    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,\r\n    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,\r\n    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,\r\n    &quot;ts.external.directory.path&quot;: &quot;C:\\\\Users\\\\dell\\\\WebstormProjects\\\\FaceAi-V2\\\\faceai\\\\frontend\\\\node_modules\\\\typescript\\\\lib&quot;,\r\n    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;\r\n  }\r\n}</component>\r\n  <component name=\"SharedIndexes\">\r\n    <attachedChunks>\r\n      <set>\r\n        <option value=\"bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-WS-253.31033.133\" />\r\n      </set>\r\n    </attachedChunks>\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"b3b76b11-5697-4110-b5b7-ca8958ad6822\" name=\"Changes\" comment=\"\" />\r\n      <created>1770157798989</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1770157798989</updated>\r\n      <workItem from=\"1776434397048\" duration=\"6770000\" />\r\n      <workItem from=\"1776689992446\" duration=\"2567000\" />\r\n      <workItem from=\"1776762168986\" duration=\"2162000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"main\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1770588531270</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1770588531270</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"main\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1770588757872</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1770588757872</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"main\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1776441747652</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1776441747652</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"main\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1776441765583</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1776441765583</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"main\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1776690015817</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1776690015817</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"main\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1776699180056</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1776699180056</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"main\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1776766224293</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1776766224293</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1776767526928</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1776767526928</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1776767531474</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1776767531474</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1776767533046</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1776767533046</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1776767534005</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1776767534005</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1776767556933</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1776767556933</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1776776948934</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1776776948934</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"14\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"main\" />\r\n    <MESSAGE value=\"Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 153df139c1a48e2cd3eb233c5b12e6a9956f8c1c)
++++ b/.idea/workspace.xml	(date 1777366334003)
+@@ -4,7 +4,10 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="b3b76b11-5697-4110-b5b7-ca8958ad6822" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
++    <list default="true" id="b3b76b11-5697-4110-b5b7-ca8958ad6822" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
++      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_4_21_2026_3_31_PM__Changes_.xml" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -73,6 +76,7 @@
+       <workItem from="1776434397048" duration="6770000" />
+       <workItem from="1776689992446" duration="2567000" />
+       <workItem from="1776762168986" duration="2162000" />
++      <workItem from="1777366325599" duration="9000" />
+     </task>
+     <task id="LOCAL-00001" summary="main">
+       <option name="closed" value="true" />
+@@ -178,11 +182,30 @@
+       <option name="project" value="LOCAL" />
+       <updated>1776776948934</updated>
+     </task>
+-    <option name="localTasksCounter" value="14" />
++    <task id="LOCAL-00014" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
++      <option name="closed" value="true" />
++      <created>1776777231747</created>
++      <option name="number" value="00014" />
++      <option name="presentableId" value="LOCAL-00014" />
++      <option name="project" value="LOCAL" />
++      <updated>1776777231747</updated>
++    </task>
++    <option name="localTasksCounter" value="15" />
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+     <option name="version" value="3" />
++  </component>
++  <component name="Vcs.Log.Tabs.Properties">
++    <option name="TAB_STATES">
++      <map>
++        <entry key="MAIN">
++          <value>
++            <State />
++          </value>
++        </entry>
++      </map>
++    </option>
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="main" />

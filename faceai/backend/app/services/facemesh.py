@@ -274,7 +274,29 @@ def _add_front_ear_points(points: Dict[str, Dict], image_bgr: np.ndarray, width:
 
 
 def _subject_mask(image_bgr: np.ndarray) -> np.ndarray:
-    not_background = np.any(image_bgr < 245, axis=2).astype(np.uint8)
+    height, width = image_bgr.shape[:2]
+    border = max(8, int(min(height, width) * 0.04))
+    border_pixels = np.concatenate(
+        [
+            image_bgr[:border].reshape(-1, 3),
+            image_bgr[-border:].reshape(-1, 3),
+            image_bgr[:, :border].reshape(-1, 3),
+            image_bgr[:, -border:].reshape(-1, 3),
+        ]
+    )
+    border_hsv = cv2.cvtColor(border_pixels.reshape(-1, 1, 3), cv2.COLOR_BGR2HSV).reshape(-1, 3)
+    background_candidates = border_pixels[(border_hsv[:, 2] > 120) & (border_hsv[:, 1] < 80)]
+    background_pixels = background_candidates if len(background_candidates) > 100 else border_pixels
+    background_bgr = np.median(background_pixels, axis=0).astype(np.uint8)
+
+    image_lab = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2LAB).astype(np.float32)
+    background_lab = cv2.cvtColor(np.array([[background_bgr]], dtype=np.uint8), cv2.COLOR_BGR2LAB).astype(np.float32)[0, 0]
+    color_distance = np.linalg.norm(image_lab - background_lab, axis=2)
+    not_background = (color_distance > 18).astype(np.uint8)
+
+    if float(np.mean(not_background)) > 0.85:
+        not_background = np.any(image_bgr < 245, axis=2).astype(np.uint8)
+
     kernel = np.ones((5, 5), np.uint8)
     mask = cv2.morphologyEx(not_background, cv2.MORPH_CLOSE, kernel, iterations=2)
     mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel, iterations=1)
@@ -287,10 +309,37 @@ def _subject_mask(image_bgr: np.ndarray) -> np.ndarray:
     return labels == largest
 
 
+def _profile_projection_scores(mask: np.ndarray) -> tuple[float, float]:
+    ys, _ = np.where(mask)
+    if len(ys) == 0:
+        return 0.0, 0.0
+
+    top = int(np.min(ys))
+    bottom = int(np.max(ys))
+    box_h = bottom - top
+    if box_h <= 0:
+        return 0.0, 0.0
+
+    forehead_y = top + int(box_h * 0.22)
+    nose_y = top + int(box_h * 0.44)
+    forehead_row = np.where(mask[forehead_y])[0]
+    nose_row = np.where(mask[nose_y])[0]
+    if len(forehead_row) == 0 or len(nose_row) == 0:
+        return 0.0, 0.0
+
+    left_projection = max(0.0, float(forehead_row[0] - nose_row[0]))
+    right_projection = max(0.0, float(nose_row[-1] - forehead_row[-1]))
+    return left_projection, right_projection
+
+
 def _estimate_profile_orientation(mask: np.ndarray) -> bool:
     ys, xs = np.where(mask)
     if len(xs) == 0:
         return True
+    left_projection, right_projection = _profile_projection_scores(mask)
+    if max(left_projection, right_projection) >= 8 and abs(left_projection - right_projection) >= 4:
+        return left_projection > right_projection
+
     top = int(np.min(ys))
     bottom = int(np.max(ys))
     upper_cutoff = top + int((bottom - top) * 0.78)

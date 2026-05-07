@@ -1,4 +1,7 @@
-from app.services.facemesh import _points_from_map
+import cv2
+import numpy as np
+
+from app.services.facemesh import _is_strict_profile_image, _points_from_map, _subject_mask
 
 
 class _Lm:
@@ -26,3 +29,29 @@ def test_prn_midpoint_from_mesh_points():
     assert points["Prn"]["normalized"]["x"] == 0.4
     assert points["Prn"]["normalized"]["y"] == 0.5
     assert points["Prn"]["normalized"]["z"] == 0.3
+
+
+def test_profile_mask_ignores_tinted_background():
+    image = np.full((420, 360, 3), (214, 206, 186), dtype=np.uint8)
+    head = np.array(
+        [
+            [80, 50],
+            [250, 50],
+            [285, 115],
+            [350, 182],
+            [276, 212],
+            [258, 300],
+            [180, 350],
+            [92, 300],
+            [50, 178],
+        ],
+        dtype=np.int32,
+    )
+    cv2.fillPoly(image, [head], (126, 155, 190))
+
+    mask = _subject_mask(image)
+    ys, xs = np.where(mask)
+
+    assert int(xs.min()) > 40
+    assert int(xs.max()) < 350
+    assert _is_strict_profile_image(image)

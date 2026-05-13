@@ -415,15 +415,33 @@ def _pick_row(
     return max(candidates, key=lambda item: scorer(item[0], item[1]))
 
 
+def _edge_point_at(edge: Dict[int, int], y: float, fallback_x: int, width: int, height: int) -> Dict:
+    if edge:
+        nearest_y = min(edge.keys(), key=lambda row_y: abs(row_y - y))
+        return _synthetic_point(float(edge[nearest_y]), float(nearest_y), width, height)
+    return _synthetic_point(float(fallback_x), float(y), width, height)
+
+
+def _lerp_point(a: tuple[float, float], b: tuple[float, float], t: float, width: int, height: int) -> Dict:
+    ax, ay = a
+    bx, by = b
+    return _synthetic_point(ax + ((bx - ax) * t), ay + ((by - ay) * t), width, height)
+
+
+def _offset_point(point: Dict, dx: float, dy: float, width: int, height: int) -> Dict:
+    return _synthetic_point(float(point["pixel"]["x"]) + dx, float(point["pixel"]["y"]) + dy, width, height)
+
+
 def _estimate_side_profile_points(image_bgr: np.ndarray, width: int, height: int) -> Dict[str, Dict]:
     mask = _subject_mask(image_bgr)
-    front_edge, back_edge, (min_x, min_y, max_x, max_y) = _find_edge_points(mask, _estimate_profile_orientation(mask))
+    faces_left = _estimate_profile_orientation(mask)
+    front_edge, back_edge, (min_x, min_y, max_x, max_y) = _find_edge_points(mask, faces_left)
     if not front_edge:
         return {}
 
-    faces_left = _estimate_profile_orientation(mask)
     box_w = max(1, max_x - min_x)
     box_h = max(1, max_y - min_y)
+    posterior = 1.0 if faces_left else -1.0
 
     def anterior(y: int, x: int) -> float:
         return _anterior_score(float(x), faces_left)
@@ -448,6 +466,12 @@ def _estimate_side_profile_points(image_bgr: np.ndarray, width: int, height: int
         max(min_y + int(box_h * 0.20), prn_y - int(box_h * 0.06)),
         lambda y, x: -anterior(y, x),
     )
+    g = _pick_row(
+        front_edge,
+        min_y + int(box_h * 0.17),
+        max(min_y + int(box_h * 0.28), prn_y - int(box_h * 0.10)),
+        lambda y, x: anterior(y, x) - abs(y - (min_y + int(box_h * 0.26))) * 0.45,
+    )
     sn = _pick_row(
         front_edge,
         prn_y + int(box_h * 0.03),
@@ -465,6 +489,8 @@ def _estimate_side_profile_points(image_bgr: np.ndarray, width: int, height: int
         sn = (min(max_y, prn_y + int(box_h * 0.12)), prn_x)
     if n is None:
         n = (max(min_y, prn_y - int(box_h * 0.16)), prn_x)
+    if g is None:
+        g = (max(min_y, n[0] - int(box_h * 0.04)), n[1])
     if pg is None:
         pg = (min_y + int(box_h * 0.78), front_edge.get(min_y + int(box_h * 0.78), prn_x))
 
@@ -477,6 +503,29 @@ def _estimate_side_profile_points(image_bgr: np.ndarray, width: int, height: int
         if abs(x - pg_x) <= tol:
             chin_band.append((y, x))
     me_y, me_x = max(chin_band, key=lambda item: item[0]) if chin_band else pg
+
+    mouth_y = sn[0] + ((pg_y - sn[0]) * 0.34)
+    lip_band_start = int(sn[0] + ((pg_y - sn[0]) * 0.16))
+    lip_band_end = int(sn[0] + ((pg_y - sn[0]) * 0.52))
+    lip = _pick_row(
+        front_edge,
+        lip_band_start,
+        lip_band_end,
+        lambda y, x: anterior(y, x) - abs(y - mouth_y) * 0.35,
+    ) or (int(mouth_y), front_edge.get(int(mouth_y), sn[1]))
+    lip_y, lip_x = lip
+
+    tr_y = min_y + int(box_h * 0.04)
+    ft_y = min_y + int(box_h * 0.20)
+    ex_y = n[0] + int(box_h * 0.07)
+    zy_y = n[0] + int(box_h * 0.17)
+    go_y = min_y + int(box_h * 0.71)
+
+    tr = _edge_point_at(front_edge, tr_y, prn_x, width, height)
+    ft = _edge_point_at(front_edge, ft_y, prn_x, width, height)
+    ex_base = _edge_point_at(front_edge, ex_y, prn_x, width, height)
+    zy_base = _edge_point_at(front_edge, zy_y, prn_x, width, height)
+    go = _edge_point_at(back_edge, go_y, min_x if faces_left else max_x, width, height)
 
     ear_center_y = int(n[0] + ((sn[0] - n[0]) * 0.55))
     front_at_ear = front_edge.get(ear_center_y, prn_x)
@@ -494,11 +543,24 @@ def _estimate_side_profile_points(image_bgr: np.ndarray, width: int, height: int
         pa_x = ear_center_x - (ear_w * 0.55)
 
     points = {
+        "Tr_R": tr,
+        "Tr_L": tr,
+        "Ft_R": ft,
+        "G": anterior_point(g[0], g[1]),
         "Prn": anterior_point(prn_y, prn_x),
         "N": anterior_point(n[0], n[1]),
         "Sn": anterior_point(sn[0], sn[1]),
+        "C_R": _lerp_point((float(prn_x), float(prn_y)), (float(sn[1]), float(sn[0])), 0.80, width, height),
+        "Ac_R": _offset_point(anterior_point(sn[0], sn[1]), posterior * box_w * 0.055, -box_h * 0.015, width, height),
+        "Ls": _offset_point(anterior_point(lip_y, lip_x), 0, -box_h * 0.025, width, height),
+        "Sto": anterior_point(lip_y, lip_x),
+        "Li": _offset_point(anterior_point(lip_y, lip_x), posterior * box_w * 0.015, box_h * 0.035, width, height),
+        "Sl_R": _offset_point(anterior_point(pg_y, pg_x), posterior * box_w * 0.030, -box_h * 0.055, width, height),
         "Pg": anterior_point(pg_y, pg_x),
         "Me": anterior_point(me_y, me_x),
+        "Ex_R": _offset_point(ex_base, posterior * box_w * 0.055, 0, width, height),
+        "Zy_R": _offset_point(zy_base, posterior * box_w * 0.120, box_h * 0.005, width, height),
+        "Go_R": go,
         "Sa_R": _synthetic_point(ear_center_x, ear_center_y - (ear_h * 0.52), width, height),
         "Sba_R": _synthetic_point(ear_center_x, ear_center_y + (ear_h * 0.52), width, height),
         "Pra_R": _synthetic_point(pra_x, ear_center_y, width, height),
@@ -542,15 +604,21 @@ def analyze_images(
 
     front_points = _points_from_map(front_selection.landmarks, mapping, front_w, front_h)
     _add_front_ear_points(front_points, front_image, front_w, front_h)
-    side_points = (
+    mapped_side_points = (
         _points_from_map(side_selection.landmarks, mapping, side_w, side_h)
         if side_selection is not None
         else {}
     )
-    if side_missing and side_profile_ok:
-        side_points = _estimate_side_profile_points(side_image, side_w, side_h)
-        side_fallback_used = bool(side_points)
-        side_missing = not side_fallback_used
+    side_points = mapped_side_points.copy()
+    if side_profile_ok:
+        estimated_side_points = _estimate_side_profile_points(side_image, side_w, side_h)
+        if estimated_side_points:
+            side_points.update(estimated_side_points)
+            side_fallback_used = side_selection is None
+    if not side_points and side_selection is not None:
+        side_fallback_used = False
+    if side_missing and side_points:
+        side_missing = False
     tr_method = "none"
     trichion = None
     tr_debug = {}

@@ -94,17 +94,5 @@ export async function analyzeImages(
     throw new Error(detail || "Analysis failed");
   }
 
-  const data = (await res.json()) as AnalyzeResponse;
-  const sideMissing = data.warnings.some((warning) => {
-    const lower = warning.toLowerCase();
-    return (
-      lower.includes("no face detected in side image") ||
-      lower.includes("side image is not a true 90-degree profile")
-    );
-  });
-  if (sideMissing) {
-    throw new SideImageDetectionError();
-  }
-
-  return data;
+  return (await res.json()) as AnalyzeResponse;
 }

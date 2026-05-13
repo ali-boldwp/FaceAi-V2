@@ -39,6 +39,13 @@ class FaceSelection:
     score: float
 
 
+@dataclass
+class LandmarkPoint:
+    x: float
+    y: float
+    z: float
+
+
 def _bbox_from_landmarks(landmarks: List) -> Tuple[float, float, float, float]:
     xs = [lm.x for lm in landmarks]
     ys = [lm.y for lm in landmarks]
@@ -67,14 +74,13 @@ def _select_best_face(landmark_lists: List, image_w: int, image_h: int) -> Optio
     return best
 
 
-def _extract_landmarks(image_bgr: np.ndarray) -> Tuple[List, int]:
-    rgb = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2RGB)
+def _detect_landmarks_with_face_mesh(rgb: np.ndarray) -> Tuple[List, int]:
     if hasattr(mp, "solutions"):
         with mp.solutions.face_mesh.FaceMesh(
             static_image_mode=True,
             max_num_faces=5,
-            refine_landmarks=False,
-            min_detection_confidence=0.5,
+            refine_landmarks=True,
+            min_detection_confidence=0.25,
         ) as face_mesh:
             results = face_mesh.process(rgb)
 
@@ -84,6 +90,10 @@ def _extract_landmarks(image_bgr: np.ndarray) -> Tuple[List, int]:
         faces = [face.landmark for face in results.multi_face_landmarks]
         return faces, len(faces[0])
 
+    return [], 0
+
+
+def _detect_landmarks_with_face_landmarker(rgb: np.ndarray) -> Tuple[List, int]:
     landmarker = _get_face_landmarker()
     image = mp.Image(image_format=mp.ImageFormat.SRGB, data=rgb)
     results = landmarker.detect(image)
@@ -91,6 +101,106 @@ def _extract_landmarks(image_bgr: np.ndarray) -> Tuple[List, int]:
         return [], 0
 
     return results.face_landmarks, len(results.face_landmarks[0])
+
+
+def _detect_landmarks_rgb(rgb: np.ndarray) -> Tuple[List, int]:
+    detectors = (
+        _detect_landmarks_with_face_mesh,
+        _detect_landmarks_with_face_landmarker,
+    )
+    for detector in detectors:
+        try:
+            faces, count = detector(rgb)
+        except Exception:  # noqa: BLE001
+            continue
+        if faces:
+            return faces, count
+
+    return [], 0
+
+
+def _enhance_for_face_detection(image_bgr: np.ndarray) -> np.ndarray:
+    lab = cv2.cvtColor(image_bgr, cv2.COLOR_BGR2LAB)
+    lightness, a_channel, b_channel = cv2.split(lab)
+    clahe = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8))
+    enhanced = cv2.merge((clahe.apply(lightness), a_channel, b_channel))
+    return cv2.cvtColor(enhanced, cv2.COLOR_LAB2BGR)
+
+
+def _pad_to_square(image_bgr: np.ndarray) -> tuple[np.ndarray, int, int]:
+    height, width = image_bgr.shape[:2]
+    size = max(height, width)
+    pad_x = (size - width) // 2
+    pad_y = (size - height) // 2
+    padded = cv2.copyMakeBorder(
+        image_bgr,
+        pad_y,
+        size - height - pad_y,
+        pad_x,
+        size - width - pad_x,
+        cv2.BORDER_CONSTANT,
+        value=(255, 255, 255),
+    )
+    return padded, pad_x, pad_y
+
+
+def _restore_landmarks(
+    faces: List,
+    variant_w: int,
+    variant_h: int,
+    original_w: int,
+    original_h: int,
+    pad_x: int = 0,
+    pad_y: int = 0,
+    flipped: bool = False,
+) -> List[List[LandmarkPoint]]:
+    restored_faces: List[List[LandmarkPoint]] = []
+    for face in faces:
+        restored: List[LandmarkPoint] = []
+        for lm in face:
+            x_abs = float(lm.x) * variant_w
+            if flipped:
+                x_abs = variant_w - x_abs
+            x = (x_abs - pad_x) / original_w
+            y = (float(lm.y) * variant_h - pad_y) / original_h
+            restored.append(LandmarkPoint(x=x, y=y, z=float(lm.z)))
+        restored_faces.append(restored)
+    return restored_faces
+
+
+def _extract_landmarks(image_bgr: np.ndarray) -> Tuple[List, int]:
+    height, width = image_bgr.shape[:2]
+    enhanced = _enhance_for_face_detection(image_bgr)
+    padded, pad_x, pad_y = _pad_to_square(image_bgr)
+    padded_enhanced = _enhance_for_face_detection(padded)
+    variants = (
+        (image_bgr, 0, 0, False),
+        (cv2.flip(image_bgr, 1), 0, 0, True),
+        (enhanced, 0, 0, False),
+        (cv2.flip(enhanced, 1), 0, 0, True),
+        (padded, pad_x, pad_y, False),
+        (cv2.flip(padded, 1), pad_x, pad_y, True),
+        (padded_enhanced, pad_x, pad_y, False),
+        (cv2.flip(padded_enhanced, 1), pad_x, pad_y, True),
+    )
+
+    for variant, variant_pad_x, variant_pad_y, flipped in variants:
+        rgb = cv2.cvtColor(variant, cv2.COLOR_BGR2RGB)
+        faces, count = _detect_landmarks_rgb(rgb)
+        if faces:
+            variant_h, variant_w = variant.shape[:2]
+            return _restore_landmarks(
+                faces,
+                variant_w,
+                variant_h,
+                width,
+                height,
+                pad_x=variant_pad_x,
+                pad_y=variant_pad_y,
+                flipped=flipped,
+            ), count
+
+    return [], 0
 
 
 def _get_face_landmarker():
@@ -110,7 +220,9 @@ def _get_face_landmarker():
         base_options=python.BaseOptions(model_asset_path=str(FACE_LANDMARKER_MODEL_PATH)),
         running_mode=vision.RunningMode.IMAGE,
         num_faces=5,
-        min_face_detection_confidence=0.5,
+        min_face_detection_confidence=0.25,
+        min_face_presence_confidence=0.25,
+        min_tracking_confidence=0.25,
     )
     _FACE_LANDMARKER = vision.FaceLandmarker.create_from_options(options)
     return _FACE_LANDMARKER
@@ -132,7 +244,7 @@ def _points_from_map(landmarks: List, mapping: Dict[str, Optional[int]], width: 
             "normalized": {"x": float(lm.x), "y": float(lm.y), "z": float(lm.z)},
         }
 
-    if "Prn" in mapping and len(landmarks) > 4:
+    if mapping.get("Prn") is None and "Prn" in mapping and len(landmarks) > 4:
         lm_a = landmarks[4]
         lm_b = landmarks[1]
         nx = (lm_a.x + lm_b.x) / 2.0
@@ -403,7 +515,24 @@ def _is_strict_profile_image(image_bgr: np.ndarray) -> bool:
     return width_ratio >= 0.78 and projection_ratio >= 0.02
 
 
-def _pick_row(
+def _visible_profile_suffix(image_bgr: np.ndarray) -> str:
+    mask = _subject_mask(image_bgr)
+    faces_left = _estimate_profile_orientation(mask)
+    return "_R" if faces_left else "_L"
+
+
+def _filter_profile_visible_points(points: Dict[str, Dict], image_bgr: np.ndarray) -> Dict[str, Dict]:
+    visible_suffix = _visible_profile_suffix(image_bgr)
+    hidden_suffix = "_L" if visible_suffix == "_R" else "_R"
+    filtered: Dict[str, Dict] = {}
+    for label, point in points.items():
+        if label.endswith(hidden_suffix):
+            continue
+        filtered[label] = point
+    return filtered
+
+
+def _pick_profile_row(
     edge: Dict[int, int],
     y_start: int,
     y_end: int,
@@ -415,24 +544,15 @@ def _pick_row(
     return max(candidates, key=lambda item: scorer(item[0], item[1]))
 
 
-def _edge_point_at(edge: Dict[int, int], y: float, fallback_x: int, width: int, height: int) -> Dict:
+def _profile_edge_point(edge: Dict[int, int], target_y: float, fallback_x: float, width: int, height: int) -> Dict:
     if edge:
-        nearest_y = min(edge.keys(), key=lambda row_y: abs(row_y - y))
+        nearest_y = min(edge.keys(), key=lambda row_y: abs(row_y - target_y))
         return _synthetic_point(float(edge[nearest_y]), float(nearest_y), width, height)
-    return _synthetic_point(float(fallback_x), float(y), width, height)
+    return _synthetic_point(fallback_x, target_y, width, height)
 
 
-def _lerp_point(a: tuple[float, float], b: tuple[float, float], t: float, width: int, height: int) -> Dict:
-    ax, ay = a
-    bx, by = b
-    return _synthetic_point(ax + ((bx - ax) * t), ay + ((by - ay) * t), width, height)
-
-
-def _offset_point(point: Dict, dx: float, dy: float, width: int, height: int) -> Dict:
-    return _synthetic_point(float(point["pixel"]["x"]) + dx, float(point["pixel"]["y"]) + dy, width, height)
-
-
-def _estimate_side_profile_points(image_bgr: np.ndarray, width: int, height: int) -> Dict[str, Dict]:
+def _estimate_side_anthropometric_points(image_bgr: np.ndarray, mesh_points: Dict[str, Dict]) -> Dict[str, Dict]:
+    height, width = image_bgr.shape[:2]
     mask = _subject_mask(image_bgr)
     faces_left = _estimate_profile_orientation(mask)
     front_edge, back_edge, (min_x, min_y, max_x, max_y) = _find_edge_points(mask, faces_left)
@@ -441,132 +561,114 @@ def _estimate_side_profile_points(image_bgr: np.ndarray, width: int, height: int
 
     box_w = max(1, max_x - min_x)
     box_h = max(1, max_y - min_y)
+    suffix = "_R" if faces_left else "_L"
     posterior = 1.0 if faces_left else -1.0
 
-    def anterior(y: int, x: int) -> float:
+    def anterior_score(y: int, x: int) -> float:
         return _anterior_score(float(x), faces_left)
 
-    def anterior_point(y: int, x: int) -> Dict:
+    def point(y: float, x: float) -> Dict:
         return _synthetic_point(float(x), float(y), width, height)
 
-    prn = _pick_row(
+    prn = _pick_profile_row(
         front_edge,
-        min_y + int(box_h * 0.24),
-        min_y + int(box_h * 0.52),
-        lambda y, x: anterior(y, x),
+        min_y + int(box_h * 0.30),
+        min_y + int(box_h * 0.58),
+        lambda y, x: anterior_score(y, x),
     )
     if prn is None:
         return {}
-
     prn_y, prn_x = prn
 
-    n = _pick_row(
+    n = _pick_profile_row(
         front_edge,
-        min_y + int(box_h * 0.16),
-        max(min_y + int(box_h * 0.20), prn_y - int(box_h * 0.06)),
-        lambda y, x: -anterior(y, x),
-    )
-    g = _pick_row(
+        min_y + int(box_h * 0.18),
+        max(min_y + int(box_h * 0.26), prn_y - int(box_h * 0.08)),
+        lambda y, x: -anterior_score(y, x),
+    ) or (max(min_y, prn_y - int(box_h * 0.18)), prn_x)
+    g = _pick_profile_row(
         front_edge,
-        min_y + int(box_h * 0.17),
-        max(min_y + int(box_h * 0.28), prn_y - int(box_h * 0.10)),
-        lambda y, x: anterior(y, x) - abs(y - (min_y + int(box_h * 0.26))) * 0.45,
-    )
-    sn = _pick_row(
+        min_y + int(box_h * 0.18),
+        max(min_y + int(box_h * 0.32), n[0] + int(box_h * 0.06)),
+        lambda y, x: anterior_score(y, x) - abs(y - (n[0] + int(box_h * 0.05))) * 0.35,
+    ) or (max(min_y, n[0] - int(box_h * 0.05)), n[1])
+    sn = _pick_profile_row(
         front_edge,
-        prn_y + int(box_h * 0.03),
-        min(max_y, prn_y + int(box_h * 0.17)),
-        lambda y, x: -anterior(y, x),
-    )
-    pg = _pick_row(
+        prn_y + int(box_h * 0.02),
+        min(max_y, prn_y + int(box_h * 0.16)),
+        lambda y, x: -anterior_score(y, x),
+    ) or (min(max_y, prn_y + int(box_h * 0.10)), prn_x)
+    pg_candidate = _pick_profile_row(
         front_edge,
-        min_y + int(box_h * 0.64),
-        min_y + int(box_h * 0.90),
-        lambda y, x: anterior(y, x),
-    )
+        min_y + int(box_h * 0.66),
+        min_y + int(box_h * 0.91),
+        lambda y, x: anterior_score(y, x),
+    ) or (min_y + int(box_h * 0.78), front_edge.get(min_y + int(box_h * 0.78), prn_x))
 
-    if sn is None:
-        sn = (min(max_y, prn_y + int(box_h * 0.12)), prn_x)
-    if n is None:
-        n = (max(min_y, prn_y - int(box_h * 0.16)), prn_x)
-    if g is None:
-        g = (max(min_y, n[0] - int(box_h * 0.04)), n[1])
-    if pg is None:
-        pg = (min_y + int(box_h * 0.78), front_edge.get(min_y + int(box_h * 0.78), prn_x))
-
-    pg_y, pg_x = pg
-    chin_band = []
-    tol = max(12, int(box_w * 0.06))
-    for y, x in front_edge.items():
-        if y < pg_y:
-            continue
-        if abs(x - pg_x) <= tol:
-            chin_band.append((y, x))
-    me_y, me_x = max(chin_band, key=lambda item: item[0]) if chin_band else pg
+    pg_y, pg_x = pg_candidate
+    chin_band = [(y, x) for y, x in front_edge.items() if y >= pg_y and abs(x - pg_x) <= max(12, int(box_w * 0.08))]
+    me_y, me_x = max(chin_band, key=lambda item: item[0]) if chin_band else pg_candidate
+    target_pg_y = int(me_y - box_h * 0.09)
+    jaw_x_at_pg = front_edge.get(target_pg_y, pg_x)
+    pg_y = target_pg_y
+    pg_x = float(jaw_x_at_pg) * 0.45 + float(me_x) * 0.55
 
     mouth_y = sn[0] + ((pg_y - sn[0]) * 0.34)
-    lip_band_start = int(sn[0] + ((pg_y - sn[0]) * 0.16))
-    lip_band_end = int(sn[0] + ((pg_y - sn[0]) * 0.52))
-    lip = _pick_row(
+    lip = _pick_profile_row(
         front_edge,
-        lip_band_start,
-        lip_band_end,
-        lambda y, x: anterior(y, x) - abs(y - mouth_y) * 0.35,
+        int(sn[0] + ((pg_y - sn[0]) * 0.12)),
+        int(sn[0] + ((pg_y - sn[0]) * 0.54)),
+        lambda y, x: anterior_score(y, x) - abs(y - mouth_y) * 0.40,
     ) or (int(mouth_y), front_edge.get(int(mouth_y), sn[1]))
     lip_y, lip_x = lip
 
-    tr_y = min_y + int(box_h * 0.04)
-    ft_y = min_y + int(box_h * 0.20)
-    ex_y = n[0] + int(box_h * 0.07)
-    zy_y = n[0] + int(box_h * 0.17)
-    go_y = min_y + int(box_h * 0.71)
+    tr = _profile_edge_point(front_edge, min_y + box_h * 0.04, prn_x, width, height)
+    ft = _profile_edge_point(front_edge, min_y + box_h * 0.18, prn_x, width, height)
+    ex = _profile_edge_point(front_edge, n[0] + box_h * 0.07, prn_x, width, height)
+    zy = point(n[0] + box_h * 0.18, prn_x + posterior * box_w * 0.18)
+    go = point(pg_y + ((me_y - pg_y) * 0.20), prn_x + posterior * box_w * 0.30)
 
-    tr = _edge_point_at(front_edge, tr_y, prn_x, width, height)
-    ft = _edge_point_at(front_edge, ft_y, prn_x, width, height)
-    ex_base = _edge_point_at(front_edge, ex_y, prn_x, width, height)
-    zy_base = _edge_point_at(front_edge, zy_y, prn_x, width, height)
-    go = _edge_point_at(back_edge, go_y, min_x if faces_left else max_x, width, height)
-
-    ear_center_y = int(n[0] + ((sn[0] - n[0]) * 0.55))
-    front_at_ear = front_edge.get(ear_center_y, prn_x)
-    back_at_ear = back_edge.get(ear_center_y, max_x if faces_left else min_x)
-    ear_span = abs(back_at_ear - front_at_ear)
-    ear_w = max(18.0, ear_span * 0.18)
+    ear_y = min_y + (box_h * 0.47)
+    ear_center_x = (min_x + (box_w * 0.36)) if not faces_left else (max_x - (box_w * 0.36))
     ear_h = max(26.0, box_h * 0.18)
-    if faces_left:
-        ear_center_x = front_at_ear + (ear_span * 0.80)
-        pra_x = ear_center_x - (ear_w * 0.55)
-        pa_x = ear_center_x + (ear_w * 0.55)
-    else:
-        ear_center_x = back_at_ear + ((front_at_ear - back_at_ear) * 0.20)
-        pra_x = ear_center_x + (ear_w * 0.55)
-        pa_x = ear_center_x - (ear_w * 0.55)
+    ear_w = max(18.0, box_w * 0.075)
 
-    points = {
+    estimated = {
         "Tr_R": tr,
         "Tr_L": tr,
-        "Ft_R": ft,
-        "G": anterior_point(g[0], g[1]),
-        "Prn": anterior_point(prn_y, prn_x),
-        "N": anterior_point(n[0], n[1]),
-        "Sn": anterior_point(sn[0], sn[1]),
-        "C_R": _lerp_point((float(prn_x), float(prn_y)), (float(sn[1]), float(sn[0])), 0.80, width, height),
-        "Ac_R": _offset_point(anterior_point(sn[0], sn[1]), posterior * box_w * 0.055, -box_h * 0.015, width, height),
-        "Ls": _offset_point(anterior_point(lip_y, lip_x), 0, -box_h * 0.025, width, height),
-        "Sto": anterior_point(lip_y, lip_x),
-        "Li": _offset_point(anterior_point(lip_y, lip_x), posterior * box_w * 0.015, box_h * 0.035, width, height),
-        "Sl_R": _offset_point(anterior_point(pg_y, pg_x), posterior * box_w * 0.030, -box_h * 0.055, width, height),
-        "Pg": anterior_point(pg_y, pg_x),
-        "Me": anterior_point(me_y, me_x),
-        "Ex_R": _offset_point(ex_base, posterior * box_w * 0.055, 0, width, height),
-        "Zy_R": _offset_point(zy_base, posterior * box_w * 0.120, box_h * 0.005, width, height),
-        "Go_R": go,
-        "Sa_R": _synthetic_point(ear_center_x, ear_center_y - (ear_h * 0.52), width, height),
-        "Sba_R": _synthetic_point(ear_center_x, ear_center_y + (ear_h * 0.52), width, height),
-        "Pra_R": _synthetic_point(pra_x, ear_center_y, width, height),
-        "Pa_R": _synthetic_point(pa_x, ear_center_y, width, height),
-        "T_R": _synthetic_point(pra_x, ear_center_y, width, height),
+        f"Ft{suffix}": ft,
+        "Ft_S": ft,
+        "G": point(g[0], g[1]),
+        "N": point(n[0], n[1]),
+        f"Ex{suffix}": ex,
+        f"Zy{suffix}": zy,
+        "Prn": point(prn_y, prn_x),
+        f"Al{suffix}": point(sn[0] - box_h * 0.025, prn_x + posterior * box_w * 0.055),
+        "Sn": point(sn[0], sn[1]),
+        "Ls": point(lip_y - box_h * 0.025, lip_x),
+        "Sto": point(lip_y, lip_x),
+        "Li": point(lip_y + box_h * 0.035, lip_x + posterior * box_w * 0.015),
+        "Sl_R": point(pg_y - box_h * 0.055, pg_x + posterior * box_w * 0.030),
+        "Pg": point(pg_y, pg_x),
+        "Me": point(me_y, me_x),
+        f"Go{suffix}": go,
+        f"Sa{suffix}": point(ear_y - ear_h * 0.52, ear_center_x),
+        f"Sba{suffix}": point(ear_y + ear_h * 0.52, ear_center_x),
+        f"Pra{suffix}": point(ear_y, ear_center_x - posterior * ear_w * 0.55),
+        f"Pa{suffix}": point(ear_y, ear_center_x + posterior * ear_w * 0.55),
+        f"T{suffix}": point(ear_y, ear_center_x - posterior * ear_w * 0.30),
     }
+
+    for label in ("Ps_L", "Pi_L", "Ir_L", "Cph_L", "Ch_L"):
+        if label.endswith(suffix) and label in mesh_points:
+            estimated[label] = mesh_points[label]
+
+    points = _filter_profile_visible_points(mesh_points, image_bgr)
+    for label, value in estimated.items():
+        if label.startswith(("Sa", "Sba", "Pra", "Pa", "T", "Go", "Tr")) or label in {"Pg", "Me"}:
+            points[label] = value
+        else:
+            points.setdefault(label, value)
 
     return points
 
@@ -583,12 +685,11 @@ def analyze_images(
     side_profile_ok = _is_strict_profile_image(side_image)
 
     front_faces, front_count = _extract_landmarks(front_image)
-    side_faces, side_count = _extract_landmarks(side_image) if side_profile_ok else ([], 0)
+    side_faces, side_count = _extract_landmarks(side_image)
 
     if not front_faces:
         raise ValueError("No face detected in front image")
     side_missing = False
-    side_fallback_used = False
     if not side_faces:
         side_missing = True
 
@@ -603,20 +704,20 @@ def analyze_images(
     mapping = load_landmark_map()
 
     front_points = _points_from_map(front_selection.landmarks, mapping, front_w, front_h)
-    _add_front_ear_points(front_points, front_image, front_w, front_h)
     mapped_side_points = (
         _points_from_map(side_selection.landmarks, mapping, side_w, side_h)
         if side_selection is not None
         else {}
     )
     side_points = mapped_side_points.copy()
+    side_profile_estimated = False
     if side_profile_ok:
-        estimated_side_points = _estimate_side_profile_points(side_image, side_w, side_h)
+        estimated_side_points = _estimate_side_anthropometric_points(side_image, side_points)
         if estimated_side_points:
-            side_points.update(estimated_side_points)
-            side_fallback_used = side_selection is None
-    if not side_points and side_selection is not None:
-        side_fallback_used = False
+            side_points = estimated_side_points
+            side_profile_estimated = True
+        elif side_points:
+            side_points = _filter_profile_visible_points(side_points, side_image)
     if side_missing and side_points:
         side_missing = False
     tr_method = "none"
@@ -668,11 +769,11 @@ def analyze_images(
     if len(side_faces) > 1:
         warnings.append("Multiple faces detected in side image; selected the most central/largest face.")
     if not side_profile_ok:
-        warnings.append("Side image is not a true 90-degree profile; side measurements are unavailable.")
-    elif side_missing:
+        warnings.append("Side image did not pass the strict 90-degree profile check; using detected landmarks anyway.")
+    if side_missing:
         warnings.append("No face detected in side image; side measurements are unavailable.")
-    elif side_fallback_used:
-        warnings.append("Side landmarks estimated using profile fallback.")
+    elif side_profile_estimated and side_selection is None:
+        warnings.append("Side face mesh was not detected; side profile landmarks were estimated from the profile outline.")
     if not trichion_available:
         warnings.append("Trichion (Tr) unavailable; hairline segmentation did not return a result.")
         if _HAIRLINE_IMPORT_ERROR is not None:
